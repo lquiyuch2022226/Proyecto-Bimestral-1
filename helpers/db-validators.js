@@ -16,7 +16,6 @@ const existeUsuarioById = async (id = '') => {
 }
 
 module.exports = {
-    esRoleValido,
     existenteEmail,
     existeUsuarioById
 }
