@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "usuariosColeccion",
-    "dateExported": "2024-02-19T05:26:49.165Z",
+    "dateExported": "2024-02-19T05:38:53.016Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -35,6 +35,58 @@
             "created": "2024-02-19T05:25:24.614Z",
             "modified": "2024-02-19T05:25:33.979Z",
             "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4e09c46d-5f79-48bc-89bb-06357e494e8b",
+            "colId": "15d0bce5-be0b-4c9a-a060-2c190d0fa3cf",
+            "containerId": "",
+            "name": "usuario GetById",
+            "url": "http://localhost:3000/api/usuarios/65d2e6248731729e3f15143e",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-19T05:34:56.014Z",
+            "modified": "2024-02-19T05:35:05.394Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e3866942-2aff-4c8e-a0c6-0c46a51a87b9",
+            "colId": "15d0bce5-be0b-4c9a-a060-2c190d0fa3cf",
+            "containerId": "",
+            "name": "usuario Put",
+            "url": "http://localhost:3000/api/usuarios/65d2e6248731729e3f15143e",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-19T05:35:21.785Z",
+            "modified": "2024-02-19T05:35:41.997Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"usuario PUT\",\n  \"correo\": \"usuario2@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a70d7eb-1597-43f6-ba11-1334bf249cff",
+            "colId": "15d0bce5-be0b-4c9a-a060-2c190d0fa3cf",
+            "containerId": "",
+            "name": "usuario Delete",
+            "url": "http://localhost:3000/api/usuarios/65d2e6248731729e3f15143e",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-02-19T05:37:11.310Z",
+            "modified": "2024-02-19T05:37:52.197Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyZTYyNDg3MzE3MjllM2YxNTE0M2UiLCJpYXQiOjE3MDgzMjEwNTksImV4cCI6MTcwODMyNDY1OX0.9LOs9uGbnAeWNIB-j9F3ePKLjM_SCqXXGPCdntJ4r7g"
+                }
+            ],
             "params": [],
             "tests": []
         }
