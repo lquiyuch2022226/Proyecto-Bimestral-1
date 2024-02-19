@@ -12,7 +12,7 @@ const login = async (req = request, res = response) => {
 
         if(!usuario){
             return res.status(400).json({
-                msg: "Credencias incorrectas, correo no existe en la base de datos."
+                msg: "Credenciales incorrectas, correo no existe en la base de datos."
             });
         }
 
