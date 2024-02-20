@@ -1,14 +1,14 @@
-const { Router } = require('express');
-const { check } = require('express-validator');
+import { Router } from 'express';
+import { check } from 'express-validator';
 
-const { validarCampos, validarJWT} = require('../middlewares');
+import { validarCampos, validarJWT} from'../middlewares';
 
-const { 
+import { 
     usuariosPost,
     usuariosGet, 
     getUsuarioById,
     putUsuarios,
-    usuariosDelete} = require('../controllers/usuario.controller');
+    usuariosDelete} from '../controllers/usuario.controller';
 
 const { existenteEmail, existeUsuarioById } = require('../helpers/db-validators');
 

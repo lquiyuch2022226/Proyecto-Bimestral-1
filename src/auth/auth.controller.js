@@ -1,10 +1,9 @@
-const { request, response } = require("express");
-const Usuario = require("../models/usuario");
-const bycryptjs = require('bcryptjs');
-const { generarJWT } = require("../helpers/generar-jwt");
+import Usuario from '../models/usuario';
+import bycryptjs from 'bcryptjs';
+import { generarJWT } from '../helpers/generar-jwt'
 
 
-const login = async (req = request, res = response) => {
+export const login = async (req, res) => {
     const { correo, password } = req.body;
 
     try{
@@ -18,7 +17,7 @@ const login = async (req = request, res = response) => {
 
          if(!usuario.estado){
             return res.status(400).json({
-                msg: "El usuario no existe en la base de datos"
+                msg: "User do not exist in database"
             });
          };
 
@@ -32,7 +31,7 @@ const login = async (req = request, res = response) => {
          const token = await generarJWT(usuario.id);
 
          res.status(200).json({
-            msg: "Bienvenido",
+            msg: "Welcome",
             usuario,
             token
          });
@@ -45,7 +44,3 @@ const login = async (req = request, res = response) => {
     };
 
 };
-
-module.exports = {
-    login
-}
