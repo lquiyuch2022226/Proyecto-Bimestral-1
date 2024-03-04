@@ -1,11 +1,11 @@
 import { Router } from 'express';
 import { check } from 'express-validator';
 
-import { validarCampos } from'../middlewares/validar-campos.js';
+import { validarCampos } from '../middlewares/validar-campos.js';
 import { validarJWT } from'../middlewares/validar-jwt.js';
 
 import { 
-    usuariosPost,
+    usuarioPost,
     usuariosGet, 
     getUsuarioById,
     putUsuarios,
@@ -18,20 +18,20 @@ const router = Router();
 router.post(
     "/",
     [
-        check("nombre", "El nombre no puede estar vacío").not().isEmpty(),
-        check("password","El password debe ser mayor a 6 caracteres").isLength({min:6}),
-        check("correo","Este no es un correo válido").isEmail(),
+        check("nombre", "The name is required").not().isEmpty(),
+        check("password","The password is required").not().isEmpty(),
+        check("password","The password needs a minimun of 6 characters").isLength({min:6}),
+        check("correo","Invalid email").isEmail(),
         check("correo").custom(existenteEmail),
-        //check("role").custom(esRoleValido),
-        validarCampos,
-    ], usuariosPost);
+        validarCampos
+    ], usuarioPost);
 
 router.get("/", usuariosGet);
 
 router.get(
     "/:id",
     [
-        check('id', 'No es un id válido').isMongoId(),
+        check('id', 'Invalid id').isMongoId(),
         check('id').custom(existeUsuarioById),
         validarCampos
     ], getUsuarioById);
@@ -39,7 +39,8 @@ router.get(
 router.put(
     "/:id",
     [
-        check('id', 'No es un id válido').isMongoId(),
+        validarJWT,
+        check('id', 'Invalid id').isMongoId(),
         check('id').custom(existeUsuarioById),
         validarCampos
     ], putUsuarios);
@@ -51,7 +52,7 @@ router.delete(
     [   
         validarJWT,
         //tieneRolAutorizado('ADMIN_ROLE','SUPER_ROLE'),
-        check('id', 'No es un id válido').isMongoId(),
+        check('id', 'Invalid Id').isMongoId(),
         check('id').custom(existeUsuarioById),
         validarCampos
     ], usuariosDelete);

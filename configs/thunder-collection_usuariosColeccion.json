@@ -1,0 +1,99 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "usuariosColeccion",
+    "dateExported": "2024-03-04T23:05:31.902Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "18a969f7-318a-46c2-9043-d4aaf057df98",
+            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "containerId": "",
+            "name": "usuario Post",
+            "url": "http://localhost:3000/ventasApi/v1/user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T21:44:57.061Z",
+            "modified": "2024-03-04T22:56:26.144Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"usuario1\",\n  \"correo\": \"usuario1@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "27792ca9-76f9-4207-bfbc-dc14bf9b4ae4",
+            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "containerId": "",
+            "name": "usuarios Get",
+            "url": "http://localhost:3000/ventasApi/v1/user/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-04T21:44:57.062Z",
+            "modified": "2024-03-04T22:12:53.689Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7bd584d8-7c10-4fc8-be66-a7106d6f84bc",
+            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "containerId": "",
+            "name": "usuario GetById",
+            "url": "http://localhost:3000/ventasApi/v1/user/65e65236a5d6e33d090a6602",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-04T21:44:57.063Z",
+            "modified": "2024-03-04T22:59:41.628Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6e914e1c-e7d8-4c9b-8fad-abb42aa68c96",
+            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "containerId": "",
+            "name": "usuario Put",
+            "url": "http://localhost:3000/ventasApi/v1/user/65e65236a5d6e33d090a6602",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-03-04T21:44:57.064Z",
+            "modified": "2024-03-04T23:02:59.499Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NTIzNmE1ZDZlMzNkMDkwYTY2MDIiLCJpYXQiOjE3MDk1OTMzNjEsImV4cCI6MTcwOTU5Njk2MX0.1B3LRrYr4v8WLfXqwMJa1NACFlPdpUouZcCPtc5bmYA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"usuario PUT\",\n  \"correo\": \"usuario2@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2702c704-223c-45d4-a721-3c8b5ee0d3f0",
+            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "containerId": "",
+            "name": "usuario Delete",
+            "url": "http://localhost:3000/ventasApi/v1/user/65e65236a5d6e33d090a6602",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-03-04T21:44:57.065Z",
+            "modified": "2024-03-04T23:05:19.428Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NTIzNmE1ZDZlMzNkMDkwYTY2MDIiLCJpYXQiOjE3MDk1OTMzNjEsImV4cCI6MTcwOTU5Njk2MX0.1B3LRrYr4v8WLfXqwMJa1NACFlPdpUouZcCPtc5bmYA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
