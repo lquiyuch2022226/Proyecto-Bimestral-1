@@ -5,8 +5,8 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
-//import userRoutes from '../src/user.routes.js';
-//import authRoutes from '../src.auth/auth.routes.js';
+import userRoutes from '../src/user/user.routes.js';
+import authRoutes from '../src/auth/auth.routes.js';
 
 class Server{
     constructor(){
@@ -24,7 +24,7 @@ class Server{
         await dbConnection();
     }
 
-    widdlewares(){
+    middlewares(){
         this.app.use(express.urlencoded({extended: false}));
         this.app.use(cors());
         this.app.use(helmet());

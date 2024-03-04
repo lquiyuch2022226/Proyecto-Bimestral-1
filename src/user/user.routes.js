@@ -1,16 +1,17 @@
 import { Router } from 'express';
 import { check } from 'express-validator';
 
-import { validarCampos, validarJWT} from'../middlewares';
+import { validarCampos } from'../middlewares/validar-campos.js';
+import { validarJWT } from'../middlewares/validar-jwt.js';
 
 import { 
     usuariosPost,
     usuariosGet, 
     getUsuarioById,
     putUsuarios,
-    usuariosDelete} from '../controllers/usuario.controller';
+    usuariosDelete} from '../user/user.controller.js';
 
-const { existenteEmail, existeUsuarioById } = require('../helpers/db-validators');
+import { existenteEmail, existeUsuarioById } from '../helpers/db-validators.js';
 
 const router = Router();
 
@@ -55,4 +56,4 @@ router.delete(
         validarCampos
     ], usuariosDelete);
 
-module.exports = router;
+export default router;
