@@ -9,7 +9,7 @@ export const productPost = async (req, res) => {
 
     if(user.role !== "ADMIN_ROLE"){
         return  res.status(400).json({
-            msg: "You can't CREATE this PRODUCT because you aren't a ADMIN"
+            msg: "You can't CREATE this PRODUCT because you aren't an ADMIN"
         });
     }
 

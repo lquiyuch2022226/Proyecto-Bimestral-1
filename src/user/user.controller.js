@@ -51,7 +51,7 @@ export const putUsuarios = async (req, res = response) =>{
 
     if(user.role !== "ADMIN_ROLE"){
         return  res.status(400).json({
-            msg: "You can't EDIT this user because you aren't a ADMIN"
+            msg: "You can't EDIT this user because you aren't an ADMIN"
         });
     }
 
@@ -66,7 +66,7 @@ export const putUsuarios = async (req, res = response) =>{
     const usuarioActualizado = await User.findByIdAndUpdate(id, resto, { new: true });
 
     res.status(200).json({
-        msg: 'El siguiente usuario fue actualizado:',
+        msg: 'This user was UPDATED:',
         usuarioActualizado
     });
 
@@ -90,7 +90,7 @@ export const usuariosDelete = async (req, res) => {
     const usuarioAutenticado = req.usuario;
 
     res.status(200).json({
-        msg: 'El siguiente usuario fue ELIMINADO:',
+        msg: 'This user was DELETED:',
         usuario,
         usuarioAutenticado
     });

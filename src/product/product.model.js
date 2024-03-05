@@ -31,8 +31,8 @@ const ProductSchema = mongoose.Schema({
 });
 
 ProductSchema.methods.toJSON = function(){
-    const{ __v, password, _id, ...product} = this.toObject();
-    product.uid = _id;
+    const{ __v, _id, ...product} = this.toObject();
+    product.product_id = _id;
     return product;
 };
 
