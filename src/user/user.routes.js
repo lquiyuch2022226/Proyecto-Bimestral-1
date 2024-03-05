@@ -11,7 +11,7 @@ import {
     putUsuarios,
     usuariosDelete} from '../user/user.controller.js';
 
-import { existenteEmail, existeUsuarioById } from '../helpers/db-validators.js';
+import { esRoleValido, existenteEmail, existeUsuarioById } from '../helpers/db-validators.js';
 
 const router = Router();
 
@@ -23,6 +23,7 @@ router.post(
         check("password","The password needs a minimun of 6 characters").isLength({min:6}),
         check("correo","Invalid email").isEmail(),
         check("correo").custom(existenteEmail),
+        check("role").custom(esRoleValido),
         validarCampos
     ], usuarioPost);
 
@@ -42,6 +43,7 @@ router.put(
         validarJWT,
         check('id', 'Invalid id').isMongoId(),
         check('id').custom(existeUsuarioById),
+        check("role").custom(esRoleValido),
         validarCampos
     ], putUsuarios);
 

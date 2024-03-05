@@ -18,7 +18,7 @@ export const validarJWT = async(req = request, res = response, next)=> {
         //verificar que el usuario exista
         if(!usuario){
             return res.status(401).json({
-                msg: "User don't exists in database"
+                msg: "The token has a user that don't exists in database"
             });
         }
 
@@ -34,7 +34,7 @@ export const validarJWT = async(req = request, res = response, next)=> {
     }catch(e){
         console.log(e);
         res.status(401).json({
-            msg: "NO valid Token"
+            msg: "Invalid token, try another one"
         })
     }
 }

@@ -1,98 +1,102 @@
 {
     "client": "Thunder Client",
     "collectionName": "usuariosColeccion",
-    "dateExported": "2024-03-04T23:05:31.902Z",
+    "dateExported": "2024-03-05T04:43:42.943Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "18a969f7-318a-46c2-9043-d4aaf057df98",
-            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "_id": "b9eb292d-7037-4401-a080-460d62c90e2e",
+            "colId": "cf66dc14-7377-4c17-bee6-1633fd819005",
             "containerId": "",
             "name": "usuario Post",
             "url": "http://localhost:3000/ventasApi/v1/user",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-04T21:44:57.061Z",
-            "modified": "2024-03-04T22:56:26.144Z",
+            "created": "2024-03-05T03:59:51.373Z",
+            "modified": "2024-03-05T04:35:04.400Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"usuario1\",\n  \"correo\": \"usuario1@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"usuario1\",\n  \"correo\": \"usuario3@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"CLIENT_ROLE\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "27792ca9-76f9-4207-bfbc-dc14bf9b4ae4",
-            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "_id": "7488f51e-5803-43fa-b013-61f4bb9f36ff",
+            "colId": "cf66dc14-7377-4c17-bee6-1633fd819005",
             "containerId": "",
             "name": "usuarios Get",
             "url": "http://localhost:3000/ventasApi/v1/user/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-04T21:44:57.062Z",
-            "modified": "2024-03-04T22:12:53.689Z",
+            "created": "2024-03-05T03:59:51.374Z",
+            "modified": "2024-03-05T03:59:51.374Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "7bd584d8-7c10-4fc8-be66-a7106d6f84bc",
-            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "_id": "76d00b4c-163e-47a9-8671-5fe0b89b80bb",
+            "colId": "cf66dc14-7377-4c17-bee6-1633fd819005",
             "containerId": "",
             "name": "usuario GetById",
-            "url": "http://localhost:3000/ventasApi/v1/user/65e65236a5d6e33d090a6602",
+            "url": "http://localhost:3000/ventasApi/v1/user/65e69d2a14366b33f56f86cd",
             "method": "GET",
             "sortNum": 50000,
-            "created": "2024-03-04T21:44:57.063Z",
-            "modified": "2024-03-04T22:59:41.628Z",
+            "created": "2024-03-05T03:59:51.375Z",
+            "modified": "2024-03-05T04:18:59.094Z",
             "headers": [],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "6e914e1c-e7d8-4c9b-8fad-abb42aa68c96",
-            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "_id": "3fd59ddd-0dc1-4cb5-b1f5-5ab36562e375",
+            "colId": "cf66dc14-7377-4c17-bee6-1633fd819005",
             "containerId": "",
             "name": "usuario Put",
-            "url": "http://localhost:3000/ventasApi/v1/user/65e65236a5d6e33d090a6602",
+            "url": "http://localhost:3000/ventasApi/v1/user/65e6a0f8cc8bcf7ed08a740d",
             "method": "PUT",
             "sortNum": 60000,
-            "created": "2024-03-04T21:44:57.064Z",
-            "modified": "2024-03-04T23:02:59.499Z",
+            "created": "2024-03-05T03:59:51.376Z",
+            "modified": "2024-03-05T04:42:39.905Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NTIzNmE1ZDZlMzNkMDkwYTY2MDIiLCJpYXQiOjE3MDk1OTMzNjEsImV4cCI6MTcwOTU5Njk2MX0.1B3LRrYr4v8WLfXqwMJa1NACFlPdpUouZcCPtc5bmYA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2OWU0MTM0NjI4Nzg5YmQzM2VjNDUiLCJpYXQiOjE3MDk2MTM2MTEsImV4cCI6MTcwOTYxNzIxMX0.AZay99QpV9VzxUJGrglVfnhN1r7jjaIYIEfClFKrHQ0"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"usuario PUT\",\n  \"correo\": \"usuario2@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"usuario PUT\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
                 "form": []
             },
+            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "2702c704-223c-45d4-a721-3c8b5ee0d3f0",
-            "colId": "c2f08203-0baa-434f-b394-265d94b94c79",
+            "_id": "41ef0879-78b2-4674-b796-353176530a30",
+            "colId": "cf66dc14-7377-4c17-bee6-1633fd819005",
             "containerId": "",
             "name": "usuario Delete",
-            "url": "http://localhost:3000/ventasApi/v1/user/65e65236a5d6e33d090a6602",
+            "url": "http://localhost:3000/ventasApi/v1/user/65e69e4734628789bd33ec49",
             "method": "DELETE",
             "sortNum": 70000,
-            "created": "2024-03-04T21:44:57.065Z",
-            "modified": "2024-03-04T23:05:19.428Z",
+            "created": "2024-03-05T03:59:51.377Z",
+            "modified": "2024-03-05T04:42:09.222Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NTIzNmE1ZDZlMzNkMDkwYTY2MDIiLCJpYXQiOjE3MDk1OTMzNjEsImV4cCI6MTcwOTU5Njk2MX0.1B3LRrYr4v8WLfXqwMJa1NACFlPdpUouZcCPtc5bmYA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTBmOGNjOGJjZjdlZDA4YTc0MGQiLCJpYXQiOjE3MDk2MTM2OTksImV4cCI6MTcwOTYxNzI5OX0.1Ov638COIiV1WIpTkyiOobjQ6yQFLWUF555P_ABGnvA"
                 }
             ],
             "params": [],
+            "reqType": "del",
             "tests": []
         }
     ]

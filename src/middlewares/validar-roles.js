@@ -1,4 +1,4 @@
-export const tieneRole = (...roles) =>{
+export const esRole  = (...roles) =>{
     return (req, res, next) => {
         if(!req.usuario){
             return res.status(500).json({
