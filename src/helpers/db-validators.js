@@ -1,18 +1,16 @@
 import User from '../user/user.model.js';
 import Product from '../product/product.model.js';
+import Category from '../category/category.model.js';
 
+//validaciones de roles
 export const esRoleValido = async (role = '') => {
     if (role !== "ADMIN_ROLE" && role !== "CLIENT_ROLE"){
         throw new Error(`This role is invalid, try another one`);
     }
 }
 
-export const esRoleAdmin = async (role = '') => {
-    if (role !== "ADMIN_ROLE"){
-        throw new Error(`You can't do this action because you aren't a ADMIN`);
-    }
-}
-
+//existe por algun atributo
+//user
 export const existenteEmail = async (correo = '') => {
     const existeEmail = await User.findOne({correo});
     if(existeEmail){
@@ -20,6 +18,21 @@ export const existenteEmail = async (correo = '') => {
     }
 }
 
+export const existeProducto = async (nameProduct ='') =>{
+    const existeProducto = await Product.findOne({nameProduct});
+    if(existeProducto){
+        throw new Error(`A product with this name: ${nameProduct} is already in use, try with other name`);
+    }
+}
+
+export const existeCategoriaByName = async (nameCategory ='') =>{
+    const existeCategoria = await Category.findOne({nameCategory});
+    if(existeCategoria){
+        throw new Error(`A product with this name: ${nameCategory} is already in use, try with other name`);
+    }
+}
+
+//existe por id
 export const existeUsuarioById = async (id = '') => {
     const existeUsuario = await User.findById(id);
     if(!existeUsuario){
@@ -27,9 +40,10 @@ export const existeUsuarioById = async (id = '') => {
     }
 }
 
-export const existeProducto = async (nameProduct ='') =>{
-    const existeProducto = await Product.findOne({nameProduct});
-    if(existeProducto){
-        throw new Error(`A product with this name: ${nameProduct} is already in use`);
+export const existeCategoriaById = async (id = '') =>{
+    const existeCategoria = await Category.findById(id);
+    if(!existeCategoria){
+        throw new Error(`A category with thids ID: ${ id } don't exists in database`);
     }
 }
+

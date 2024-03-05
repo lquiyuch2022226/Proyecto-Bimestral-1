@@ -3,6 +3,7 @@ import { check } from 'express-validator';
 
 import { validarCampos } from '../middlewares/validar-campos.js';
 import { validarJWT } from'../middlewares/validar-jwt.js';
+import { esRole } from '../middlewares/validar-roles.js';
 
 import { 
     usuarioPost,
@@ -41,6 +42,7 @@ router.put(
     "/:id",
     [
         validarJWT,
+        esRole("ADMIN_ROLE"),
         check('id', 'Invalid id').isMongoId(),
         check('id').custom(existeUsuarioById),
         check("role").custom(esRoleValido),
@@ -53,7 +55,7 @@ router.delete(
     "/:id",
     [   
         validarJWT,
-        //tieneRolAutorizado('ADMIN_ROLE','SUPER_ROLE'),
+        esRole("ADMIN_ROLE"),
         check('id', 'Invalid Id').isMongoId(),
         check('id').custom(existeUsuarioById),
         validarCampos

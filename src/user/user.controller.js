@@ -1,6 +1,5 @@
 import bcryptjs from 'bcryptjs';
 import User from './user.model.js';
-import jwt from 'jsonwebtoken';
 import { response } from 'express';
 
 export const usuarioPost = async (req, res) => {
@@ -44,17 +43,6 @@ export const getUsuarioById = async (req, res) => {
 }
 
 export const putUsuarios = async (req, res = response) =>{
-    const token = req.header('x-token');
-    const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
-
-    const user = await User.findById(uid);
-
-    if(user.role !== "ADMIN_ROLE"){
-        return  res.status(400).json({
-            msg: "You can't EDIT this user because you aren't an ADMIN"
-        });
-    }
-
     const { id } = req.params;
     const {_id, password, google, correo, ...resto } = req.body;
 
@@ -73,18 +61,6 @@ export const putUsuarios = async (req, res = response) =>{
 }
 
 export const usuariosDelete = async (req, res) => {
-
-    const token = req.header('x-token');
-    const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
-
-    const user = await User.findById(uid);
-
-    if(user.role !== "ADMIN_ROLE"){
-        return res.status(400).json({
-            msg: "You can't DELETE this user because you aren't a ADMIN"
-        });
-    }
-
     const {id} = req.params;
     const usuario = await User.findByIdAndUpdate(id, {estado: false});
     const usuarioAutenticado = req.usuario;
