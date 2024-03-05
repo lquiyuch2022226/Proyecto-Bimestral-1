@@ -1,0 +1,99 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "categoriaColeccion",
+    "dateExported": "2024-03-05T23:13:39.125Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cfe8bbd2-1648-4382-ba03-cf1828fac7a9",
+            "colId": "c615732f-0f64-4fb9-be64-7903931cd66e",
+            "containerId": "",
+            "name": "category Post",
+            "url": "http://localhost:3000/ventasApi/v1/category",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-05T21:50:33.262Z",
+            "modified": "2024-03-05T22:56:53.841Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2NzY2ODcsImV4cCI6MTcwOTY4MDI4N30.gxWvCA4vRgXAw9hhTObQBqPsEjDjttW6NvK2qsh68V8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameCategory\": \"Comida\",\n  \"description\": \"Hola\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "1a91d47a-76f2-4592-b9b2-93217c51841d",
+            "colId": "c615732f-0f64-4fb9-be64-7903931cd66e",
+            "containerId": "",
+            "name": "categories Get",
+            "url": "http://localhost:3000/ventasApi/v1/category",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-05T21:50:43.262Z",
+            "modified": "2024-03-05T22:21:53.384Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2NzY2ODcsImV4cCI6MTcwOTY4MDI4N30.gxWvCA4vRgXAw9hhTObQBqPsEjDjttW6NvK2qsh68V8"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "ad86feda-d455-4efa-b001-69e8349c4eeb",
+            "colId": "c615732f-0f64-4fb9-be64-7903931cd66e",
+            "containerId": "",
+            "name": "category Put",
+            "url": "http://localhost:3000/ventasApi/v1/category/65e7a3351ff163f7777c099",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-05T21:51:28.325Z",
+            "modified": "2024-03-05T23:12:24.456Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2ODAwNDgsImV4cCI6MTcwOTY4MzY0OH0.VzH5KsboTus1PAVEbKSqxpx0jqbf8J3nDOIhqp0bceY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameCategory\": \"Nombre actualizado\",\n  \"description\": \"Hola\"\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "b2df0448-0361-47f1-8723-720c741e8b19",
+            "colId": "c615732f-0f64-4fb9-be64-7903931cd66e",
+            "containerId": "",
+            "name": "category Delete",
+            "url": "http://localhost:3000/ventasApi/v1/category/65e7a3351ff163f7777c0995",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-05T21:51:36.525Z",
+            "modified": "2024-03-05T23:10:32.931Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2ODAwNDgsImV4cCI6MTcwOTY4MzY0OH0.VzH5KsboTus1PAVEbKSqxpx0jqbf8J3nDOIhqp0bceY"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

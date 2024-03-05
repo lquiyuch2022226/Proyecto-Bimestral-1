@@ -30,19 +30,18 @@ router.get( "/", [ validarJWT, esRole("ADMIN_ROLE") ],
     categoriesGet);
 
 router.put(
-    "/",
+    "/:id",
     [
         validarJWT,
         esRole("ADMIN_ROLE"),
         check('id', 'Invalid Id').isMongoId(),
         check('id').custom(existeCategoriaById),
-        check('nameCategory').custom(existeCategoriaByName),
         validarCampos
     ], categoryPut
 );
 
 router.delete(
-    "/",
+    "/:id",
     [
         validarJWT,
         esRole("ADMIN_ROLE"),

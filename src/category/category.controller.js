@@ -51,22 +51,13 @@ export const categoriesGet = async (req, res) => {
 }
 
 export const categoryPut = async (req, res = response) =>{
-    const { role: authUser } = req.user;
-    const user = await User.findById(uid);
-
-    if(authUser !== "ADMIN_ROLE"){
-        return res.status(400).json({
-            msg: "You can't DELETE this user because you aren't a ADMIN"
-        });
-    }
-
     const { id } = req.params;
     const {_id, estado, ...resto } = req.body;
 
     const categoriaActualizado = await Category.findByIdAndUpdate(id, resto, { new: true });
 
     res.status(200).json({
-        msg: 'This category was UPDATED:',
+        msg: 'This CATEGORY was UPDATED:',
         categoriaActualizado
     });
 
@@ -74,22 +65,13 @@ export const categoryPut = async (req, res = response) =>{
 
 
 export const categoryDelete = async (req, res) => {
-    const { role: authUser } = req.user;
-    const user = await User.findById(uid);
-
-    if(authUser !== "ADMIN_ROLE"){
-        return res.status(400).json({
-            msg: "You can't DELETE this user because you aren't a ADMIN"
-        });
-    }
-
     const {id} = req.params;
     const category = await Category.findByIdAndUpdate(id, {estado: false});
     const usuarioAutenticado = req.usuario;
 
     res.status(200).json({
-        msg: 'This user was DELETED:',
-        usuario,
+        msg: 'This CATEGORY was DELETED:',
+        category,
         usuarioAutenticado
     });
 }
