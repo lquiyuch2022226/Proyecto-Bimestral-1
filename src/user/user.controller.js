@@ -4,7 +4,6 @@ import jwt from 'jsonwebtoken';
 import { response } from 'express';
 
 export const usuarioPost = async (req, res) => {
-    console.log(req.body, 'xd');
     const {nombre, correo, password, role} = req.body;
     const usuario = new User( {nombre, correo, password, role} );
    

@@ -6,7 +6,7 @@ export const validarJWT = async(req = request, res = response, next)=> {
 
     if(!token){
         return res.status(401).json({
-            msg: 'There is token in the request (header)',
+            msg: "There is't token in the request (header), plis add one"
         });
     }
 
