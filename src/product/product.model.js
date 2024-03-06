@@ -14,8 +14,8 @@ const ProductSchema = mongoose.Schema({
         required: [true, 'The price is required']
     },
     category:{
-        type: String,
-        required: [true, 'The category is required']
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category'
     },
     stock:{
         type: Number,

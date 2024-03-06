@@ -1,44 +1,45 @@
 {
     "client": "Thunder Client",
     "collectionName": "productosColeccion",
-    "dateExported": "2024-03-05T23:13:42.003Z",
+    "dateExported": "2024-03-06T04:46:05.097Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "262aa48e-47af-4b91-af48-9bd16d177212",
-            "colId": "c3bf5d11-7f53-4c71-9bc9-021e7b676134",
+            "_id": "9d099f6e-58cb-425a-b20a-225aa859cc9a",
+            "colId": "e5673264-4548-45e7-b685-09f352cdac1d",
             "containerId": "",
             "name": "product Post",
             "url": "http://localhost:3000/ventasApi/v1/product",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T19:46:39.500Z",
-            "modified": "2024-03-05T20:00:14.649Z",
+            "created": "2024-03-06T03:07:17.730Z",
+            "modified": "2024-03-06T04:45:47.986Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2Njg4MDQsImV4cCI6MTcwOTY3MjQwNH0.uY7vHZcqkO6i12lkw1RCnePPReNq7N6sVqvt3_74nT8"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTk5ODAsImV4cCI6MTcwOTcwMzU4MH0.7Ipy6Os4OJPq0jtCLcdRWyCuoIwdkPEhtzuq9G9Zn0E"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameProduct\": \"Sopa Laky\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 75,\n  \"category\": \"Alimentos\",\n  \"stock\": 15\n}",
+                "raw": "{\n  \"nameProduct\": \"Sopa Lakyy\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 5,\n  \"category\": \"Comida\",\n  \"stock\": 10\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "3efac13a-e22d-4a73-9f48-092804c581f9",
-            "colId": "c3bf5d11-7f53-4c71-9bc9-021e7b676134",
+            "_id": "8d4951df-deb9-4544-bb7f-e3c9cab78854",
+            "colId": "e5673264-4548-45e7-b685-09f352cdac1d",
             "containerId": "",
             "name": "product Get",
             "url": "http://localhost:3000/ventasApi/v1/product",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-05T19:56:07.816Z",
-            "modified": "2024-03-05T19:56:13.619Z",
+            "created": "2024-03-06T03:07:17.731Z",
+            "modified": "2024-03-06T03:07:17.731Z",
             "headers": [],
             "params": [],
             "tests": []
