@@ -5,6 +5,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
+import User from '../src/user/user.model.js'
+import bcryptjs from 'bcryptjs';
 import userRoutes from '../src/user/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import productRoutes from '../src/product/product.routes.js'
@@ -22,10 +24,30 @@ class Server{
         this.middlewares();
         this.conectarDB();
         this.routes();
+        this.createAdminUser();
     }
 
     async conectarDB(){
         await dbConnection();
+    }
+
+    async createAdminUser(){
+        const existeAdminUser = await User.findOne({ role: 'ADMIN_ROLE' });
+        
+        if (!existeAdminUser) {
+            const userAdmin = {
+                nombre: 'admin',
+                correo: 'admin@gmail.com',
+                password: '123456',
+                role: 'ADMIN_ROLE',
+            };
+
+            const salt = bcryptjs.genSaltSync();
+            userAdmin.password = bcryptjs.hashSync(userAdmin.password, salt);
+
+            const user = new User(userAdmin);
+            await user.save();
+        }
     }
 
     middlewares(){
