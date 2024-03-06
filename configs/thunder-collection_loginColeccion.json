@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "loginColeccion",
-    "dateExported": "2024-03-06T03:57:18.121Z",
+    "dateExported": "2024-03-06T14:57:13.608Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,8 +14,13 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-06T03:07:17.706Z",
-            "modified": "2024-03-06T03:53:16.830Z",
-            "headers": [],
+            "modified": "2024-03-06T04:39:40.362Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTk5NzAsImV4cCI6MTcwOTcwMzU3MH0.j6oGsqg40cH2y3RLam6ozZUC05vI7nNAgMacR07AsUg"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",

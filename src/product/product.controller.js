@@ -22,6 +22,11 @@ export const productsGet = async (req, res) => {
     const [total, products] = await Promise.all([
         Product.countDocuments(query),
         Product.find(query)
+        .populate({
+            path: 'category',
+            select: 'nameCategory description -_id'
+        })
+        .select('-estado')
         .skip(Number(desde))
         .limit(Number(limite))
     ]);
@@ -29,5 +34,45 @@ export const productsGet = async (req, res) => {
     res.status(200).json({
         total,
         products
+    });
+}
+
+export const productGetByName = async (req, res) => {
+    const { name } = req.params;
+    const product = await Product.findOne( {nameProduct: name} );
+
+    if(!product.estado){
+        res.status(400).json({
+            msg: 'This product was deleted :('
+        });
+    }
+
+    res.status(200).json({
+        product
+    });
+}
+
+export const productPut = async (req, res) => {
+    const { id } = req.params;
+    const { _id, estado, ...resto } = req.body;
+
+    const productoActualizado = await Product.findByIdAndUpdate(id, resto, {new: true});
+
+    res.status(200).json({
+        msg: 'This PRODUCT was UPDATED:',
+        productoActualizado
+    });
+}
+
+export const productDelete = async (req, res) => {
+    const { id } = req.params;
+
+    const product = await Product.findByIdAndUpdate(id, {estado: false});
+    const usuarioAutenticado = req.usuario;
+
+    res.status(200).json({
+        msg: 'This PRODUCT was DELETED:',
+        product,
+        usuarioAutenticado
     });
 }

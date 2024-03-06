@@ -32,4 +32,12 @@ router.post(
 
 router.get( "/", productsGet);
 
+router.get(
+    "/:name", 
+    [
+        validarJWT,
+        esRole("ADMIN_ROLE"),
+    ],
+    productsGet);
+
 export default router;

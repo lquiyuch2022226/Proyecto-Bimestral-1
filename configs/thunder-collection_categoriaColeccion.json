@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoriaColeccion",
-    "dateExported": "2024-03-06T04:08:44.749Z",
+    "dateExported": "2024-03-06T14:57:18.503Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-03-06T03:07:17.686Z",
-            "modified": "2024-03-06T04:05:38.206Z",
+            "modified": "2024-03-06T14:23:54.804Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTczOTUsImV4cCI6MTcwOTcwMDk5NX0.NYgWFQooh9i9gT-lH6J0zIWr0PY6ABDLcHpFNVKWCVU"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4N2M1NGQxNWM1MzNjODEzZDU5MzIiLCJpYXQiOjE3MDk3MzUwMjAsImV4cCI6MTcwOTczODYyMH0.GE4214OLQ9e6ovhGLPaHtfI9d3axbiiRFM1MlYLE3ig"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameCategory\": \"Comida\",\n  \"description\": \"Categoría de comestibles para el ser humano\"\n}",
+                "raw": "{\n  \"nameCategory\": \"Comida 2\",\n  \"description\": \"Categoría de comestibles para el ser humano\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -39,11 +39,11 @@
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-03-06T03:07:17.687Z",
-            "modified": "2024-03-06T04:05:46.234Z",
+            "modified": "2024-03-06T14:24:04.587Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTczOTUsImV4cCI6MTcwOTcwMDk5NX0.NYgWFQooh9i9gT-lH6J0zIWr0PY6ABDLcHpFNVKWCVU"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4N2M1NGQxNWM1MzNjODEzZDU5MzIiLCJpYXQiOjE3MDk3MzUwMjAsImV4cCI6MTcwOTczODYyMH0.GE4214OLQ9e6ovhGLPaHtfI9d3axbiiRFM1MlYLE3ig"
                 }
             ],
             "params": [],
@@ -80,15 +80,15 @@
             "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
             "containerId": "",
             "name": "category Delete",
-            "url": "http://localhost:3000/ventasApi/v1/category/65e7eb92ba26a330a204b78a",
+            "url": "http://localhost:3000/ventasApi/v1/category/65e87c7ad15c533c813d593f",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2024-03-06T03:07:17.689Z",
-            "modified": "2024-03-06T04:08:24.505Z",
+            "modified": "2024-03-06T14:56:38.810Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTc5OTEsImV4cCI6MTcwOTcwMTU5MX0.MDAmXTwLAVl3xNuiNQvG962OfWJHph4EGa23tngHE3E"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4N2M1NGQxNWM1MzNjODEzZDU5MzIiLCJpYXQiOjE3MDk3MzUwMjAsImV4cCI6MTcwOTczODYyMH0.GE4214OLQ9e6ovhGLPaHtfI9d3axbiiRFM1MlYLE3ig"
                 }
             ],
             "params": [],

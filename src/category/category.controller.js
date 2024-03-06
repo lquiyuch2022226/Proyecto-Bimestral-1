@@ -46,7 +46,7 @@ export const categoryPut = async (req, res = response) =>{
 
 export const categoryDelete = async (req, res) => {
     const {id} = req.params;
-    const category = await Category.findByIdAndUpdate(id, {estado: false});
+    const category = await Category.findByIdAndUpdate(id, {nameCategory: "Default Product", description: "A default product", estado: false});
     const usuarioAutenticado = req.usuario;
 
     res.status(200).json({
