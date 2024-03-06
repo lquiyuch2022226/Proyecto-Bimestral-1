@@ -46,7 +46,7 @@ export const existeUsuarioById = async (id = '') => {
 export const existeCategoriaById = async (id = '') =>{
     const existeCategoria = await Category.findById(id);
     if(!existeCategoria){
-        throw new Error(`A category with thids ID: ${ id } don't exists in database`);
+        throw new Error(`A category with this ID: ${ id } don't exists in database`);
     }
 }
 

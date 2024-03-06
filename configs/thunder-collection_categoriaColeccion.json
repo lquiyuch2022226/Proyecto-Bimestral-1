@@ -1,49 +1,49 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoriaColeccion",
-    "dateExported": "2024-03-05T23:13:39.125Z",
+    "dateExported": "2024-03-06T04:08:44.749Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "cfe8bbd2-1648-4382-ba03-cf1828fac7a9",
-            "colId": "c615732f-0f64-4fb9-be64-7903931cd66e",
+            "_id": "8dd80d28-3e53-4870-8cd9-c8b0f4d1ca24",
+            "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
             "containerId": "",
             "name": "category Post",
             "url": "http://localhost:3000/ventasApi/v1/category",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-03-05T21:50:33.262Z",
-            "modified": "2024-03-05T22:56:53.841Z",
+            "created": "2024-03-06T03:07:17.686Z",
+            "modified": "2024-03-06T04:05:38.206Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2NzY2ODcsImV4cCI6MTcwOTY4MDI4N30.gxWvCA4vRgXAw9hhTObQBqPsEjDjttW6NvK2qsh68V8"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTczOTUsImV4cCI6MTcwOTcwMDk5NX0.NYgWFQooh9i9gT-lH6J0zIWr0PY6ABDLcHpFNVKWCVU"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameCategory\": \"Comida\",\n  \"description\": \"Hola\"\n}",
+                "raw": "{\n  \"nameCategory\": \"Comida\",\n  \"description\": \"Categoría de comestibles para el ser humano\"\n}",
                 "form": []
             },
             "reqType": "post",
             "tests": []
         },
         {
-            "_id": "1a91d47a-76f2-4592-b9b2-93217c51841d",
-            "colId": "c615732f-0f64-4fb9-be64-7903931cd66e",
+            "_id": "25979371-50b1-4b55-883d-c6ee6e83c582",
+            "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
             "containerId": "",
             "name": "categories Get",
             "url": "http://localhost:3000/ventasApi/v1/category",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-05T21:50:43.262Z",
-            "modified": "2024-03-05T22:21:53.384Z",
+            "created": "2024-03-06T03:07:17.687Z",
+            "modified": "2024-03-06T04:05:46.234Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2NzY2ODcsImV4cCI6MTcwOTY4MDI4N30.gxWvCA4vRgXAw9hhTObQBqPsEjDjttW6NvK2qsh68V8"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTczOTUsImV4cCI6MTcwOTcwMDk5NX0.NYgWFQooh9i9gT-lH6J0zIWr0PY6ABDLcHpFNVKWCVU"
                 }
             ],
             "params": [],
@@ -51,48 +51,48 @@
             "tests": []
         },
         {
-            "_id": "ad86feda-d455-4efa-b001-69e8349c4eeb",
-            "colId": "c615732f-0f64-4fb9-be64-7903931cd66e",
+            "_id": "c66b5066-f80c-4799-9f14-862b28e1c36a",
+            "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
             "containerId": "",
             "name": "category Put",
-            "url": "http://localhost:3000/ventasApi/v1/category/65e7a3351ff163f7777c099",
+            "url": "http://localhost:3000/ventasApi/v1/category/65e7eb92ba26a330a204b78a",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-03-05T21:51:28.325Z",
-            "modified": "2024-03-05T23:12:24.456Z",
+            "created": "2024-03-06T03:07:17.688Z",
+            "modified": "2024-03-06T04:06:48.877Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2ODAwNDgsImV4cCI6MTcwOTY4MzY0OH0.VzH5KsboTus1PAVEbKSqxpx0jqbf8J3nDOIhqp0bceY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTc5OTEsImV4cCI6MTcwOTcwMTU5MX0.MDAmXTwLAVl3xNuiNQvG962OfWJHph4EGa23tngHE3E"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameCategory\": \"Nombre actualizado\",\n  \"description\": \"Hola\"\n}",
+                "raw": "{\n  \"nameCategory\": \"Comida De Animales\",\n  \"description\": \"Categoría de comestibles para el caninos\"\n}",
                 "form": []
             },
-            "reqType": "get",
+            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "b2df0448-0361-47f1-8723-720c741e8b19",
-            "colId": "c615732f-0f64-4fb9-be64-7903931cd66e",
+            "_id": "79a09346-b2c0-4e06-bad3-f9ee289a4f91",
+            "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
             "containerId": "",
             "name": "category Delete",
-            "url": "http://localhost:3000/ventasApi/v1/category/65e7a3351ff163f7777c0995",
+            "url": "http://localhost:3000/ventasApi/v1/category/65e7eb92ba26a330a204b78a",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-05T21:51:36.525Z",
-            "modified": "2024-03-05T23:10:32.931Z",
+            "created": "2024-03-06T03:07:17.689Z",
+            "modified": "2024-03-06T04:08:24.505Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3NzljMGMyNGI3ZTRhNmYzZWYxMWMiLCJpYXQiOjE3MDk2ODAwNDgsImV4cCI6MTcwOTY4MzY0OH0.VzH5KsboTus1PAVEbKSqxpx0jqbf8J3nDOIhqp0bceY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTc5OTEsImV4cCI6MTcwOTcwMTU5MX0.MDAmXTwLAVl3xNuiNQvG962OfWJHph4EGa23tngHE3E"
                 }
             ],
             "params": [],
-            "reqType": "get",
+            "reqType": "del",
             "tests": []
         }
     ]
