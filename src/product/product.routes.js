@@ -2,12 +2,15 @@ import { Router } from 'express';
 import { check } from 'express-validator';
 import { validarCampos } from '../middlewares/validar-campos.js';
 import { validarJWT } from '../middlewares/validar-jwt.js';
-import { existeProducto, asignarCategoria, stockPositivo, pricePositivo} from '../helpers/db-validators.js';
+import { existeProducto, asignarCategoria, stockPositivo, pricePositivo, esProductoValido} from '../helpers/db-validators.js';
 import { esRole } from '../middlewares/validar-roles.js';
 
-import{ 
+import {
     productPost,
-    productsGet
+    productsGet,
+    productPut,
+    productDelete,
+    productGetByName
 } from '../product/product.controller.js'
 
 const router = Router();
@@ -30,14 +33,37 @@ router.post(
     ], productPost
 );
 
-router.get( "/", productsGet);
+router.get("/", productsGet);
 
 router.get(
-    "/:name", 
+    "/:name",
     [
         validarJWT,
         esRole("ADMIN_ROLE"),
+        check('name').custom(esProductoValido),
     ],
-    productsGet);
+    productGetByName);
+
+router.put(
+    "/:name",
+    [
+        validarJWT,
+        check('name').custom(esProductoValido),
+        check('price').custom(pricePositivo),
+        check('category').custom(asignarCategoria),
+        check('stock').custom(stockPositivo),
+        validarCampos
+    ], productPut
+);
+
+router.delete(
+    "/:name",
+    [
+        validarJWT,
+        esRole("ADMIN_ROLE"),
+        check('name').custom(esProductoValido),
+        validarCampos
+    ], productDelete
+);
 
 export default router;

@@ -1,47 +1,90 @@
 {
     "client": "Thunder Client",
     "collectionName": "productosColeccion",
-    "dateExported": "2024-03-06T14:57:09.718Z",
+    "dateExported": "2024-03-06T23:04:28.265Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "9d099f6e-58cb-425a-b20a-225aa859cc9a",
-            "colId": "e5673264-4548-45e7-b685-09f352cdac1d",
+            "_id": "fd7d61d5-6bc7-4636-9dda-90f57a1232db",
+            "colId": "fb862414-5c05-4dfc-bed1-01960337edc2",
             "containerId": "",
             "name": "product Post",
             "url": "http://localhost:3000/ventasApi/v1/product",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-06T03:07:17.730Z",
-            "modified": "2024-03-06T14:56:25.345Z",
+            "created": "2024-03-06T20:34:25.382Z",
+            "modified": "2024-03-06T22:51:10.764Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4N2M1NGQxNWM1MzNjODEzZDU5MzIiLCJpYXQiOjE3MDk3MzUwMjAsImV4cCI6MTcwOTczODYyMH0.GE4214OLQ9e6ovhGLPaHtfI9d3axbiiRFM1MlYLE3ig"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZjFiYjJmNGRhYWY0ZmE5ZTk1YWQiLCJpYXQiOjE3MDk3NjUxMzgsImV4cCI6MTcwOTc2ODczOH0.cyzIjZNSYRultFb3U--Szwwo06FNB4uL30IzjGMD5ZM"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameProduct\": \"Sopa Laky\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 5,\n  \"category\": \"Comida 2\",\n  \"stock\": 10\n}",
+                "raw": "{\n  \"nameProduct\": \"Sopa Laky 2\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 5,\n  \"category\": \"Comida\",\n  \"stock\": 10\n}",
                 "form": []
             },
             "reqType": "post",
             "tests": []
         },
         {
-            "_id": "8d4951df-deb9-4544-bb7f-e3c9cab78854",
-            "colId": "e5673264-4548-45e7-b685-09f352cdac1d",
+            "_id": "c0f41fcf-5569-453f-9885-1854124204bf",
+            "colId": "fb862414-5c05-4dfc-bed1-01960337edc2",
             "containerId": "",
             "name": "product Get",
             "url": "http://localhost:3000/ventasApi/v1/product",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-06T03:07:17.731Z",
-            "modified": "2024-03-06T03:07:17.731Z",
+            "created": "2024-03-06T20:34:25.383Z",
+            "modified": "2024-03-06T20:34:25.383Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "10b0e59b-9514-4b81-8966-ff8e9993f562",
+            "colId": "fb862414-5c05-4dfc-bed1-01960337edc2",
+            "containerId": "",
+            "name": "product GetByName",
+            "url": "http://localhost:3000/ventasApi/v1/product/Sopa Laky 2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-06T22:47:41.248Z",
+            "modified": "2024-03-06T22:52:42.491Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZjFiYjJmNGRhYWY0ZmE5ZTk1YWQiLCJpYXQiOjE3MDk3NjU1MjgsImV4cCI6MTcwOTc2OTEyOH0.iBVL7vBiYEo-WcqMSWzbvwhwdtKusfJ6GBF3Ezk09Ew"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2dad12db-7bdc-47e1-affb-2f42247c369c",
+            "colId": "fb862414-5c05-4dfc-bed1-01960337edc2",
+            "containerId": "",
+            "name": "product Put",
+            "url": "http://localhost:3000/ventasApi/v1/product/Sopa Laky 2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-06T22:53:28.059Z",
+            "modified": "2024-03-06T22:54:23.948Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZjFiYjJmNGRhYWY0ZmE5ZTk1YWQiLCJpYXQiOjE3MDk3NjU1MjgsImV4cCI6MTcwOTc2OTEyOH0.iBVL7vBiYEo-WcqMSWzbvwhwdtKusfJ6GBF3Ezk09Ew"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameProduct\": \"Sopa Laky 3\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 5,\n  \"category\": \"Comida\",\n  \"stock\": 10\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

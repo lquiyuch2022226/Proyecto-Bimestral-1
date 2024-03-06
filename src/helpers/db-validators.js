@@ -9,6 +9,13 @@ export const esRoleValido = async (role = '') => {
     }
 }
 
+export const esProductoValido = async (nameProduct ='') =>{
+    const nombreExistente = await Product.findOne({nameProduct});
+    if(!nombreExistente){
+        throw new Error(`This name of product: | ${nameProduct} | don't exists in dabatase`);
+    }
+}
+
 //EXISTE POR ALGUN ATRIBUTO
 
 //user

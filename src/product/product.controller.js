@@ -53,10 +53,13 @@ export const productGetByName = async (req, res) => {
 }
 
 export const productPut = async (req, res) => {
-    const { id } = req.params;
-    const { _id, estado, ...resto } = req.body;
+    const { name } = req.params;
+    const { _id, estado, category, ...resto } = req.body;
 
-    const productoActualizado = await Product.findByIdAndUpdate(id, resto, {new: true});
+    const producto = await Product.findOne({ nameProduct: name });
+    const categoryFound = await Category.findOne({ nameCategory: category });
+
+    const productoActualizado = await Product.findByIdAndUpdate(producto._id, resto, {new: true});
 
     res.status(200).json({
         msg: 'This PRODUCT was UPDATED:',

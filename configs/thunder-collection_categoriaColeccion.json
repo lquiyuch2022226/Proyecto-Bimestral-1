@@ -1,45 +1,45 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoriaColeccion",
-    "dateExported": "2024-03-06T14:57:18.503Z",
+    "dateExported": "2024-03-06T23:04:53.861Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "8dd80d28-3e53-4870-8cd9-c8b0f4d1ca24",
-            "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
+            "_id": "8f2c4100-ce28-42f2-afef-123e60a3780c",
+            "colId": "a7261a79-d139-4197-952b-5feba6324c81",
             "containerId": "",
             "name": "category Post",
             "url": "http://localhost:3000/ventasApi/v1/category",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-03-06T03:07:17.686Z",
-            "modified": "2024-03-06T14:23:54.804Z",
+            "created": "2024-03-06T20:34:25.357Z",
+            "modified": "2024-03-06T22:45:59.700Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4N2M1NGQxNWM1MzNjODEzZDU5MzIiLCJpYXQiOjE3MDk3MzUwMjAsImV4cCI6MTcwOTczODYyMH0.GE4214OLQ9e6ovhGLPaHtfI9d3axbiiRFM1MlYLE3ig"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZjFiYjJmNGRhYWY0ZmE5ZTk1YWQiLCJpYXQiOjE3MDk3NjUxMzgsImV4cCI6MTcwOTc2ODczOH0.cyzIjZNSYRultFb3U--Szwwo06FNB4uL30IzjGMD5ZM"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameCategory\": \"Comida 2\",\n  \"description\": \"Categoría de comestibles para el ser humano\"\n}",
+                "raw": "{\n  \"nameCategory\": \"Comida\",\n  \"description\": \"Categoría de comestibles para el ser humano\"\n}",
                 "form": []
             },
             "reqType": "post",
             "tests": []
         },
         {
-            "_id": "25979371-50b1-4b55-883d-c6ee6e83c582",
-            "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
+            "_id": "ea752727-a3d7-4a6a-bdcd-6f9e28d2d60c",
+            "colId": "a7261a79-d139-4197-952b-5feba6324c81",
             "containerId": "",
             "name": "categories Get",
             "url": "http://localhost:3000/ventasApi/v1/category",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-06T03:07:17.687Z",
-            "modified": "2024-03-06T14:24:04.587Z",
+            "created": "2024-03-06T20:34:25.358Z",
+            "modified": "2024-03-06T20:34:25.358Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -47,19 +47,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "c66b5066-f80c-4799-9f14-862b28e1c36a",
-            "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
+            "_id": "655115d2-82a0-4bc1-a04d-4f4388bcd20b",
+            "colId": "a7261a79-d139-4197-952b-5feba6324c81",
             "containerId": "",
             "name": "category Put",
             "url": "http://localhost:3000/ventasApi/v1/category/65e7eb92ba26a330a204b78a",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-03-06T03:07:17.688Z",
-            "modified": "2024-03-06T04:06:48.877Z",
+            "created": "2024-03-06T20:34:25.359Z",
+            "modified": "2024-03-06T20:34:25.359Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -72,19 +71,18 @@
                 "raw": "{\n  \"nameCategory\": \"Comida De Animales\",\n  \"description\": \"Categoría de comestibles para el caninos\"\n}",
                 "form": []
             },
-            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "79a09346-b2c0-4e06-bad3-f9ee289a4f91",
-            "colId": "69599460-085c-4f0f-b8d2-f740936d4ebd",
+            "_id": "ff598cf2-c350-4b0c-b15c-f6ee91c30ff0",
+            "colId": "a7261a79-d139-4197-952b-5feba6324c81",
             "containerId": "",
             "name": "category Delete",
             "url": "http://localhost:3000/ventasApi/v1/category/65e87c7ad15c533c813d593f",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-06T03:07:17.689Z",
-            "modified": "2024-03-06T14:56:38.810Z",
+            "created": "2024-03-06T20:34:25.360Z",
+            "modified": "2024-03-06T20:34:25.360Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -92,7 +90,6 @@
                 }
             ],
             "params": [],
-            "reqType": "del",
             "tests": []
         }
     ]
