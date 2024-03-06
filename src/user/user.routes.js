@@ -24,7 +24,6 @@ router.post(
         check("password","The password needs a minimun of 6 characters").isLength({min:6}),
         check("correo","Invalid email").isEmail(),
         check("correo").custom(existenteEmail),
-        check("role").custom(esRoleValido),
         validarCampos
     ], usuarioPost);
 

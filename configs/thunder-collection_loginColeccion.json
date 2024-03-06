@@ -1,25 +1,25 @@
 {
     "client": "Thunder Client",
     "collectionName": "loginColeccion",
-    "dateExported": "2024-03-05T23:13:50.827Z",
+    "dateExported": "2024-03-06T03:57:18.121Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "090e35de-0980-4b5c-aa1f-b0527cb4069a",
-            "colId": "f29f2295-9faf-4da5-895f-2babce5b076c",
+            "_id": "413470a0-6775-4f8b-ae5d-442e9b213052",
+            "colId": "ec052bcf-bbd8-46a1-a925-6b79b464bb38",
             "containerId": "",
             "name": "login",
             "url": "http://localhost:3000/ventasApi/v1/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T19:43:02.108Z",
-            "modified": "2024-03-05T23:07:28.233Z",
+            "created": "2024-03-06T03:07:17.706Z",
+            "modified": "2024-03-06T03:53:16.830Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\": \"usuario1@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "raw": "{\n  \"correo\": \"admin@gmail.com\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
             "reqType": "post",

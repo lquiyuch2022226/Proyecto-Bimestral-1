@@ -3,8 +3,8 @@ import User from './user.model.js';
 import { response } from 'express';
 
 export const usuarioPost = async (req, res) => {
-    const {nombre, correo, password, role} = req.body;
-    const usuario = new User( {nombre, correo, password, role} );
+    const {nombre, correo, password} = req.body;
+    const usuario = new User( {nombre, correo, password} );
    
     const salt = bcryptjs.genSaltSync();
     usuario.password = bcryptjs.hashSync(password, salt);

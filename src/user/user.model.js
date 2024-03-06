@@ -3,22 +3,25 @@ import mongoose from 'mongoose';
 const UserSchema = mongoose.Schema({
     nombre:{
         type: String,
-        required: [true, 'El nombre es obligatorio']
+        required: [true, 'The name is required']
     },
     correo:{
         type: String,
-        required: [true, 'El correo es obligatorio']
+        required: [true, 'The email is required']
     },
     password:{
         type: String,
-        required: [true, 'La contraseña es obligatoria']
+        required: [true, 'The password is required']
     },
     role:{
         type: String,
-        require: true,
-        enum: ["ADMIN_ROLE", "CLIENT_ROLE"]
+        default: "CLIENT_ROLE"
     },
     estado:{
+        type: Boolean,
+        default: true
+    },
+    google:{
         type: Boolean,
         default: true
     }

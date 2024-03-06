@@ -1,100 +1,101 @@
 {
     "client": "Thunder Client",
     "collectionName": "usuariosColeccion",
-    "dateExported": "2024-03-05T23:13:45.828Z",
+    "dateExported": "2024-03-06T03:57:12.857Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "7e344608-2f53-4864-8202-44cc2c9dc52d",
-            "colId": "3f601900-11db-4c04-b2d7-44dc4f9ceeeb",
+            "_id": "b13d00ff-41eb-4ead-a35c-51ae1cc24d5f",
+            "colId": "373fc7ca-e5aa-496d-bc23-e5b18441e5cd",
             "containerId": "",
             "name": "usuario Post",
             "url": "http://localhost:3000/ventasApi/v1/user",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T19:43:02.122Z",
-            "modified": "2024-03-05T22:30:37.658Z",
+            "created": "2024-03-06T03:07:17.800Z",
+            "modified": "2024-03-06T03:49:43.227Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"usuario1\",\n  \"correo\": \"usuario2@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"CLIENT_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"usuario1\",\n  \"correo\": \"usuario1@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
                 "form": []
             },
             "reqType": "post",
             "tests": []
         },
         {
-            "_id": "50b4cd21-d304-4546-bd87-ed40526d9707",
-            "colId": "3f601900-11db-4c04-b2d7-44dc4f9ceeeb",
+            "_id": "1201d963-9503-4c07-859e-ed954c6acfe6",
+            "colId": "373fc7ca-e5aa-496d-bc23-e5b18441e5cd",
             "containerId": "",
             "name": "usuarios Get",
             "url": "http://localhost:3000/ventasApi/v1/user/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-05T19:43:02.123Z",
-            "modified": "2024-03-05T19:43:02.123Z",
+            "created": "2024-03-06T03:07:17.801Z",
+            "modified": "2024-03-06T03:07:17.801Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "74e80fa8-72aa-4d09-808e-7d0503c1c001",
-            "colId": "3f601900-11db-4c04-b2d7-44dc4f9ceeeb",
+            "_id": "e9a9cd36-b6c8-4347-ac39-db2f6b6c3fde",
+            "colId": "373fc7ca-e5aa-496d-bc23-e5b18441e5cd",
             "containerId": "",
             "name": "usuario GetById",
             "url": "http://localhost:3000/ventasApi/v1/user/65e69d2a14366b33f56f86cd",
             "method": "GET",
             "sortNum": 50000,
-            "created": "2024-03-05T19:43:02.124Z",
-            "modified": "2024-03-05T19:43:02.124Z",
+            "created": "2024-03-06T03:07:17.802Z",
+            "modified": "2024-03-06T03:07:17.802Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "b01e07a3-3717-493b-9424-756b26f07acc",
-            "colId": "3f601900-11db-4c04-b2d7-44dc4f9ceeeb",
+            "_id": "6dadab43-bb1c-4592-a5ea-34a1f1460650",
+            "colId": "373fc7ca-e5aa-496d-bc23-e5b18441e5cd",
             "containerId": "",
             "name": "usuario Put",
-            "url": "http://localhost:3000/ventasApi/v1/user/65e6a0f8cc8bcf7ed08a740d",
+            "url": "http://localhost:3000/ventasApi/v1/user/65e7e857175b158378fb232b",
             "method": "PUT",
             "sortNum": 60000,
-            "created": "2024-03-05T19:43:02.125Z",
-            "modified": "2024-03-05T22:30:54.093Z",
+            "created": "2024-03-06T03:07:17.803Z",
+            "modified": "2024-03-06T03:56:12.685Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3OWQwZDFmZjE2M2Y3Nzc3YzA5ODgiLCJpYXQiOjE3MDk2Nzc4NDMsImV4cCI6MTcwOTY4MTQ0M30.0kpvCz6WeeHiis0qoLVZ8yOaxqOScGnIh6jOaXH4Z2w"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTcxOTYsImV4cCI6MTcwOTcwMDc5Nn0.ZYltxseLQJ8KqaZQKbhQYOmyBkQv7FVDZ7pOHThF75g"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"usuario PUT\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"usuario PUT\",\n  \"password\": \"123456\",\n  \"role\": \"CLIENT_ROLE\"\n}",
                 "form": []
             },
             "reqType": "put",
             "tests": []
         },
         {
-            "_id": "48b33510-5308-48c9-9c4d-c8667082fd05",
-            "colId": "3f601900-11db-4c04-b2d7-44dc4f9ceeeb",
+            "_id": "ff9991b1-966a-49af-972e-61100b4957b4",
+            "colId": "373fc7ca-e5aa-496d-bc23-e5b18441e5cd",
             "containerId": "",
             "name": "usuario Delete",
-            "url": "http://localhost:3000/ventasApi/v1/user/65e69e4734628789bd33ec49",
+            "url": "http://localhost:3000/ventasApi/v1/user/65e7e857175b158378fb232b",
             "method": "DELETE",
             "sortNum": 70000,
-            "created": "2024-03-05T19:43:02.126Z",
-            "modified": "2024-03-05T19:43:02.126Z",
+            "created": "2024-03-06T03:07:17.804Z",
+            "modified": "2024-03-06T03:56:43.682Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2YTBmOGNjOGJjZjdlZDA4YTc0MGQiLCJpYXQiOjE3MDk2MTM2OTksImV4cCI6MTcwOTYxNzI5OX0.1Ov638COIiV1WIpTkyiOobjQ6yQFLWUF555P_ABGnvA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZTRjZDkwZjM4ZjJhMWYwNzBkMGMiLCJpYXQiOjE3MDk2OTczOTUsImV4cCI6MTcwOTcwMDk5NX0.NYgWFQooh9i9gT-lH6J0zIWr0PY6ABDLcHpFNVKWCVU"
                 }
             ],
             "params": [],
+            "reqType": "del",
             "tests": []
         }
     ]

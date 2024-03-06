@@ -2,14 +2,15 @@ import User from '../user/user.model.js';
 import Product from '../product/product.model.js';
 import Category from '../category/category.model.js';
 
-//validaciones de roles
+// VALIDACION DE ROLE
 export const esRoleValido = async (role = '') => {
     if (role !== "ADMIN_ROLE" && role !== "CLIENT_ROLE"){
         throw new Error(`This role is invalid, try another one`);
     }
 }
 
-//existe por algun atributo
+//EXISTE POR ALGUN ATRIBUTO
+
 //user
 export const existenteEmail = async (correo = '') => {
     const existeEmail = await User.findOne({correo});
@@ -18,6 +19,7 @@ export const existenteEmail = async (correo = '') => {
     }
 }
 
+//producto
 export const existeProducto = async (nameProduct ='') =>{
     const existeProducto = await Product.findOne({nameProduct});
     if(existeProducto){
@@ -25,6 +27,7 @@ export const existeProducto = async (nameProduct ='') =>{
     }
 }
 
+//categoria
 export const existeCategoriaByName = async (nameCategory ='') =>{
     const existeCategoria = await Category.findOne({nameCategory});
     if(existeCategoria){
@@ -32,7 +35,7 @@ export const existeCategoriaByName = async (nameCategory ='') =>{
     }
 }
 
-//existe por id
+// EXISTE POR ID
 export const existeUsuarioById = async (id = '') => {
     const existeUsuario = await User.findById(id);
     if(!existeUsuario){
