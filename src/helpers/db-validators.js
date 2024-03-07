@@ -74,7 +74,7 @@ export const stockPositivo = async (stock = '')=>{
 }
 
 export const pricePositivo = async (price = '')=>{
-    if(price < 0){
-        throw new Error(`The price can't be negative, plis change it`);
+    if(price <= 0){
+        throw new Error(`The price can't be negative or 0, plis change it`);
     }
 }

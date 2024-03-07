@@ -57,7 +57,12 @@ export const productPut = async (req, res) => {
     const { _id, estado, category, ...resto } = req.body;
 
     const producto = await Product.findOne({ nameProduct: name });
-    const categoryFound = await Category.findOne({ nameCategory: category });
+
+    if(!producto.estado){
+        return res.status(400).json({
+            msg: "This PRODUCT don't exists because was deleted",
+        });
+    }
 
     const productoActualizado = await Product.findByIdAndUpdate(producto._id, resto, {new: true});
 
@@ -68,14 +73,23 @@ export const productPut = async (req, res) => {
 }
 
 export const productDelete = async (req, res) => {
-    const { id } = req.params;
+    const { name } = req.params;
 
-    const product = await Product.findByIdAndUpdate(id, {estado: false});
+    const producto = await Product.findOne({ nameProduct: name });
+
+    if(!producto.estado){
+        return res.status(400).json({
+            msg: "This PRODUCT don't exists because was deleted",
+        });
+    }
+
+    const productoEliminado = await Product.findByIdAndUpdate(producto._id, {estado: false});
+
     const usuarioAutenticado = req.usuario;
 
     res.status(200).json({
         msg: 'This PRODUCT was DELETED:',
-        product,
+        productoEliminado,
         usuarioAutenticado
     });
 }

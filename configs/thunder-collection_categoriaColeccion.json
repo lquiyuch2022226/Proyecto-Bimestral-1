@@ -1,24 +1,24 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoriaColeccion",
-    "dateExported": "2024-03-06T23:04:53.861Z",
+    "dateExported": "2024-03-07T03:41:12.330Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "8f2c4100-ce28-42f2-afef-123e60a3780c",
-            "colId": "a7261a79-d139-4197-952b-5feba6324c81",
+            "_id": "2e5c56f4-fd46-4421-bb87-17849492361e",
+            "colId": "3453d2ae-f423-482a-a448-afc47ad2e238",
             "containerId": "",
             "name": "category Post",
             "url": "http://localhost:3000/ventasApi/v1/category",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-03-06T20:34:25.357Z",
-            "modified": "2024-03-06T22:45:59.700Z",
+            "created": "2024-03-07T03:14:23.151Z",
+            "modified": "2024-03-07T03:41:01.441Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4ZjFiYjJmNGRhYWY0ZmE5ZTk1YWQiLCJpYXQiOjE3MDk3NjUxMzgsImV4cCI6MTcwOTc2ODczOH0.cyzIjZNSYRultFb3U--Szwwo06FNB4uL30IzjGMD5ZM"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MzEyYWRmZDRhZDJhMzAxNjJlYWMiLCJpYXQiOjE3MDk3ODE1NTAsImV4cCI6MTcwOTc4NTE1MH0.mNwV9fVIjv_GovO3hDhn3dvNt5JCNl59CVybT3ldHmE"
                 }
             ],
             "params": [],
@@ -31,15 +31,15 @@
             "tests": []
         },
         {
-            "_id": "ea752727-a3d7-4a6a-bdcd-6f9e28d2d60c",
-            "colId": "a7261a79-d139-4197-952b-5feba6324c81",
+            "_id": "ed1ed6e7-e346-4a7f-a4f8-593039ec8db2",
+            "colId": "3453d2ae-f423-482a-a448-afc47ad2e238",
             "containerId": "",
             "name": "categories Get",
             "url": "http://localhost:3000/ventasApi/v1/category",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-06T20:34:25.358Z",
-            "modified": "2024-03-06T20:34:25.358Z",
+            "created": "2024-03-07T03:14:23.152Z",
+            "modified": "2024-03-07T03:14:23.152Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -50,15 +50,15 @@
             "tests": []
         },
         {
-            "_id": "655115d2-82a0-4bc1-a04d-4f4388bcd20b",
-            "colId": "a7261a79-d139-4197-952b-5feba6324c81",
+            "_id": "1fc8c5e2-e9d4-403c-8806-f0ec8c1baa1a",
+            "colId": "3453d2ae-f423-482a-a448-afc47ad2e238",
             "containerId": "",
             "name": "category Put",
             "url": "http://localhost:3000/ventasApi/v1/category/65e7eb92ba26a330a204b78a",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-03-06T20:34:25.359Z",
-            "modified": "2024-03-06T20:34:25.359Z",
+            "created": "2024-03-07T03:14:23.153Z",
+            "modified": "2024-03-07T03:14:23.153Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -74,15 +74,15 @@
             "tests": []
         },
         {
-            "_id": "ff598cf2-c350-4b0c-b15c-f6ee91c30ff0",
-            "colId": "a7261a79-d139-4197-952b-5feba6324c81",
+            "_id": "2d1b0c80-1ca6-4d31-b79a-51f9ebda4f2b",
+            "colId": "3453d2ae-f423-482a-a448-afc47ad2e238",
             "containerId": "",
             "name": "category Delete",
             "url": "http://localhost:3000/ventasApi/v1/category/65e87c7ad15c533c813d593f",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-06T20:34:25.360Z",
-            "modified": "2024-03-06T20:34:25.360Z",
+            "created": "2024-03-07T03:14:23.154Z",
+            "modified": "2024-03-07T03:14:23.154Z",
             "headers": [
                 {
                     "name": "x-token",

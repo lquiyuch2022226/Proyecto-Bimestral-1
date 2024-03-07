@@ -32,7 +32,7 @@ const ProductSchema = mongoose.Schema({
 
 ProductSchema.methods.toJSON = function(){
     const{ __v, _id, ...product} = this.toObject();
-    product.product_id = _id;
+    product.PRODUCT_ID = _id;
     return product;
 };
 
