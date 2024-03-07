@@ -10,7 +10,10 @@ import {
     productsGet,
     productPut,
     productDelete,
-    productGetByName
+    productGetByName,
+    productsInventory,
+    productsOutOfStock,
+    productsMostSelled
 } from '../product/product.controller.js'
 
 const router = Router();
@@ -42,7 +45,8 @@ router.get(
         esRole("ADMIN_ROLE"),
         check('name').custom(esProductoValido),
     ],
-    productGetByName);
+    productGetByName
+);
 
 router.put(
     "/:name",
@@ -64,6 +68,34 @@ router.delete(
         check('name').custom(esProductoValido),
         validarCampos
     ], productDelete
+);
+
+
+router.get(
+    "/get/inventory",
+    [
+        validarJWT,
+        esRole("ADMIN_ROLE"),
+    ],
+    productsInventory
+);
+
+router.get(
+    "/get/productOutOfStock",
+    [
+        validarJWT,
+        esRole("ADMIN_ROLE"),
+    ],
+    productsOutOfStock
+);
+
+router.get(
+    "/get/productsMostSelled",
+    [
+        validarJWT,
+        esRole("ADMIN_ROLE"),
+    ],
+    productsMostSelled
 );
 
 export default router;
