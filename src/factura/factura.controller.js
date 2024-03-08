@@ -25,7 +25,8 @@ export const agregarProductoAlCarrito = async (req, res) => {
 
         let carrito = await Factura.findOne({ userId });
 
-        if (!carrito) {
+        if (!carrito || carrito.estado === "false") {
+            console.log(!carrito.estado)
             const newCarrito = new Factura({
                 carritoWithProducts: [{
                     product: product._id,
@@ -74,7 +75,7 @@ export const agregarProductoAlCarrito = async (req, res) => {
 export const facturasGet = async (req, res) => {
     const { limite, desde } = req.query;
     const userId = req.usuario._id;
-    const query = { userId: userId };
+    const query = { userId: userId, estado: true};
 
     const [total, facturas] = await Promise.all([
         Factura.countDocuments(query),
