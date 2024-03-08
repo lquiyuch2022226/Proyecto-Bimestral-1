@@ -41,6 +41,16 @@ export const agregarProductoAlCarrito = async (req, res) => {
         } else {
             const existingProductIndex = carrito.carritoWithProducts.findIndex(item => item.product.toString() === product._id.toString());
             if (existingProductIndex !== -1) {
+                // Verificar el stock antes de agregar la cantidad al producto existente en el carrito
+                const totalHowManyProducts = carrito.carritoWithProducts[existingProductIndex].howManyProducts + parseInt(howManyProducts);
+                const validacionDeSuficienteStockDespues = await stockSuficiente(productName, totalHowManyProducts);
+
+                if (!validacionDeSuficienteStockDespues) {
+                    return res.status(400).json({
+                        msg: `We don't have enough products to sell you. We only have | ${product.stock} | products in stock.`
+                    });
+                }
+
                 carrito.carritoWithProducts[existingProductIndex].howManyProducts += parseInt(howManyProducts);
                 carrito.carritoWithProducts[existingProductIndex].subtotal += parseInt(howManyProducts) * product.price;
             } else {
