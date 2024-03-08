@@ -1,0 +1,33 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "carritoColeccion",
+    "dateExported": "2024-03-08T10:25:29.395Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "aaf6255b-1619-49b8-b853-640b34cd2dae",
+            "colId": "80323e6d-cbb6-48f8-abbd-e9f8cae37a9d",
+            "containerId": "",
+            "name": "carrito AddProduct",
+            "url": "http://localhost:3000/ventasApi/v1/factura",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-08T09:42:13.170Z",
+            "modified": "2024-03-08T10:20:43.262Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZTY2YjU1MmIxMzY1OGExNWE4ZGUiLCJpYXQiOjE3MDk4OTMyMzQsImV4cCI6MTcwOTg5NjgzNH0.DG__Ep0W3Ml19n9t2Wx2HGvliIXEzIvJWehTjD1krms"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"productName\": \"Sopa Laky\",\n  \"howManyProducts\": \"10\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

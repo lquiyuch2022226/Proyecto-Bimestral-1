@@ -16,6 +16,14 @@ export const esProductoValido = async (nameProduct ='') =>{
     }
 }
 
+export const stockSuficiente = async (nameProduct ='', howManyProducts ='') =>{
+    const productoExistente = await Product.findOne({nameProduct});
+    if( productoExistente.stock < howManyProducts){
+        return false;
+    }
+    return true;
+}
+
 //EXISTE POR ALGUN ATRIBUTO
 
 //user

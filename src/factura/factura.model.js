@@ -5,9 +5,9 @@ const FacturaSchema = mongoose.Schema({
         type: String,
         default: "0/0/0"
     },
-    carritoCompra: [{
+    carritoWithProducts: [{
         product: {
-            type: Schema.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'Product',
             required: true
         },
@@ -21,7 +21,7 @@ const FacturaSchema = mongoose.Schema({
         }
     }],
     userId:{
-        type: Schema.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
     },
