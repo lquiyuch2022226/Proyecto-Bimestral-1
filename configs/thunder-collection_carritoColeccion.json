@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "carritoColeccion",
-    "dateExported": "2024-03-08T10:25:29.395Z",
+    "dateExported": "2024-03-08T11:54:55.312Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,19 +14,38 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-08T09:42:13.170Z",
-            "modified": "2024-03-08T10:20:43.262Z",
+            "modified": "2024-03-08T11:47:09.164Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZTY2YjU1MmIxMzY1OGExNWE4ZGUiLCJpYXQiOjE3MDk4OTMyMzQsImV4cCI6MTcwOTg5NjgzNH0.DG__Ep0W3Ml19n9t2Wx2HGvliIXEzIvJWehTjD1krms"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmEyODZlNTIwZjc1YzNkZGFlNWYiLCJpYXQiOjE3MDk4OTgzODcsImV4cCI6MTcwOTkwMTk4N30.MZkw93XD-APDS6mYWJ8kbLyOJBaZVw2OmId5y9ameMY"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"productName\": \"Sopa Laky\",\n  \"howManyProducts\": \"10\"\n}",
+                "raw": "{\n  \"productName\": \"Sopa Laky 2\",\n  \"howManyProducts\": \"10\"\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "09698519-7686-41d0-ba9e-2aa3741db074",
+            "colId": "80323e6d-cbb6-48f8-abbd-e9f8cae37a9d",
+            "containerId": "",
+            "name": "carrito Get",
+            "url": "http://localhost:3000/ventasApi/v1/factura",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-08T11:31:53.012Z",
+            "modified": "2024-03-08T11:47:28.832Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmEyODZlNTIwZjc1YzNkZGFlNWYiLCJpYXQiOjE3MDk4OTgzODcsImV4cCI6MTcwOTkwMTk4N30.MZkw93XD-APDS6mYWJ8kbLyOJBaZVw2OmId5y9ameMY"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]
