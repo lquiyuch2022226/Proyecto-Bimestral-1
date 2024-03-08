@@ -27,7 +27,6 @@ export const productsGet = async (req, res) => {
                 select: 'nameCategory description -_id'
             })
             .select('-estado')
-            .select('-estado')
             .skip(Number(desde))
             .limit(Number(limite))
     ]);

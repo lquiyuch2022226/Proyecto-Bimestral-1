@@ -7,6 +7,7 @@ import { esRole } from '../middlewares/validar-roles.js';
 
 import {
     agregarProductoAlCarrito,
+    facturasGet
 } from '../factura/factura.controller.js'
 
 const router = Router();
@@ -22,5 +23,8 @@ router.post(
         validarCampos
     ], agregarProductoAlCarrito
 );
+
+router.get( "/", [ validarJWT, esRole("CLIENT_ROLE") ], 
+facturasGet);
 
 export default router;

@@ -39,11 +39,17 @@ export const agregarProductoAlCarrito = async (req, res) => {
             await newCarrito.save();
             carrito = newCarrito;
         } else {
-            carrito.carritoWithProducts.push({
-                product: product._id,
-                howManyProducts,
-                subtotal: product.price * howManyProducts
-            });
+            const existingProductIndex = carrito.carritoWithProducts.findIndex(item => item.product.toString() === product._id.toString());
+            if (existingProductIndex !== -1) {
+                carrito.carritoWithProducts[existingProductIndex].howManyProducts += parseInt(howManyProducts);
+                carrito.carritoWithProducts[existingProductIndex].subtotal += parseInt(howManyProducts) * product.price;
+            } else {
+                carrito.carritoWithProducts.push({
+                    product: product._id,
+                    howManyProducts,
+                    subtotal: product.price * howManyProducts
+                });
+            }
 
             await carrito.save();
         }
@@ -54,4 +60,28 @@ export const agregarProductoAlCarrito = async (req, res) => {
     } catch (error) {
         console.log(error)
     }
+}
+
+export const facturasGet = async (req, res) => {
+    const { limite, desde } = req.query;
+    const userId = req.usuario._id;
+    const query = { userId: userId };
+
+    const [total, facturas] = await Promise.all([
+        Factura.countDocuments(query),
+        Factura.find(query)
+            .populate({
+                path: 'carritoWithProducts.product',
+                select: 'nameProduct price -_id'
+            })
+            .select('-estado')
+            .select('-date')
+            .skip(Number(desde))
+            .limit(Number(limite))
+    ]);
+
+    res.status(200).json({
+        total,
+        facturas
+    });
 }
