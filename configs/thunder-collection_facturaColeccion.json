@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "facturaColeccion",
+    "dateExported": "2024-03-08T14:17:47.736Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "75cf26af-5582-4b23-996e-024c8718a7d5",
+            "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
+            "containerId": "",
+            "name": "pagar Productos",
+            "url": "http://localhost:3000/ventasApi/v1/factura/65eb00acaa95962ca54fc720",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-08T12:17:08.333Z",
+            "modified": "2024-03-08T14:12:55.656Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmRhMTVhNDY5Mzc4YTczODk1ZWEiLCJpYXQiOjE3MDk5MDcxNjYsImV4cCI6MTcwOTkxMDc2Nn0.QMUHWnHJ3RCu66yCFjbZSX67shQxq2kbuEsRvGuLflA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

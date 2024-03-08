@@ -149,7 +149,7 @@ export const productsMostSelled = async (req, res) => {
                 select: 'nameCategory description -_id'
             })
             .select('-estado')
-            .sort({ totalSales: 1 })
+            .sort({ totalSales: -1 })
             .skip(Number(desde))
             .limit(Number(limite))
     ]);

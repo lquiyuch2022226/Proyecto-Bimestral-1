@@ -1,5 +1,4 @@
 import Factura from './factura.model.js';
-import User from '../user/user.model.js';
 import Product from '../product/product.model.js';
 import { stockSuficiente } from '../helpers/db-validators.js';
 
@@ -41,7 +40,7 @@ export const agregarProductoAlCarrito = async (req, res) => {
         } else {
             const existingProductIndex = carrito.carritoWithProducts.findIndex(item => item.product.toString() === product._id.toString());
             if (existingProductIndex !== -1) {
-                // Verificar el stock antes de agregar la cantidad al producto existente en el carrito
+
                 const totalHowManyProducts = carrito.carritoWithProducts[existingProductIndex].howManyProducts + parseInt(howManyProducts);
                 const validacionDeSuficienteStockDespues = await stockSuficiente(productName, totalHowManyProducts);
 
@@ -94,4 +93,37 @@ export const facturasGet = async (req, res) => {
         total,
         facturas
     });
+}
+
+
+export const pagarProductos = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const userId = req.usuario._id;
+        //const query = { _id: id, userId: userId };
+
+
+        const carrito = await Factura.findById(id).populate('carritoWithProducts.product');;
+
+
+        for (const item of carrito.carritoWithProducts) {
+            const product = item.product;
+            const cantidadComprada = item.howManyProducts;
+
+            product.stock -= cantidadComprada;
+            product.totalSales += cantidadComprada;
+            await product.save();
+        }
+
+        carrito.carritoWithProducts = [];
+        await carrito.save();
+
+        res.status(200).json({
+            msg: 'Payment successful. Stock updated and sales recorded.'
+        });
+
+    } catch (error) {
+        console.log(error)
+        res.status(400).json( {error} );
+    }
 }

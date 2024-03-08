@@ -1,6 +1,7 @@
 import User from '../user/user.model.js';
 import Product from '../product/product.model.js';
 import Category from '../category/category.model.js';
+import Factura from '../factura/factura.model.js';
 
 // VALIDACION DE ROLE
 export const esRoleValido = async (role = '') => {
@@ -73,6 +74,12 @@ export const existeCategoriaById = async (id = '') =>{
     }
 }
 
+export const existeFacturaById = async (id = '') =>{
+    const existeFactura = await Factura.findById(id);
+    if(!existeFactura){
+        throw new Error(`A factura with this ID: | ${ id } | don't exists in database`);
+    }
+}
 
 //VALIDACION STOCK, PRICE and totalSales
 export const stockPositivo = async (stock = '')=>{

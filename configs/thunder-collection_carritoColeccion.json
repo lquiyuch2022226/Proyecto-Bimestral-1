@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "carritoColeccion",
-    "dateExported": "2024-03-08T12:13:31.695Z",
+    "dateExported": "2024-03-08T14:17:51.542Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-08T09:42:13.170Z",
-            "modified": "2024-03-08T12:13:17.071Z",
+            "modified": "2024-03-08T14:16:27.288Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmRhMTVhNDY5Mzc4YTczODk1ZWEiLCJpYXQiOjE3MDk4OTkyODAsImV4cCI6MTcwOTkwMjg4MH0.TG97LuEKOQdNFfjre4hefrTu1_EmAZyXvBM9s7hrkO8"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmRhMTVhNDY5Mzc4YTczODk1ZWEiLCJpYXQiOjE3MDk5MDczNzYsImV4cCI6MTcwOTkxMDk3Nn0.TWqRdzN1KcDoxBCVmTWOwcIuFaWG894QKsvhVagETGk"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"productName\": \"Sopa Laky 2\",\n  \"howManyProducts\": \"1\"\n}",
+                "raw": "{\n  \"productName\": \"Sopa Laky 3\",\n  \"howManyProducts\": \"5\"\n}",
                 "form": []
             },
             "tests": []
@@ -38,11 +38,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-08T11:31:53.012Z",
-            "modified": "2024-03-08T12:01:29.666Z",
+            "modified": "2024-03-08T14:13:24.364Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmRhMTVhNDY5Mzc4YTczODk1ZWEiLCJpYXQiOjE3MDk4OTkyODAsImV4cCI6MTcwOTkwMjg4MH0.TG97LuEKOQdNFfjre4hefrTu1_EmAZyXvBM9s7hrkO8"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmRhMTVhNDY5Mzc4YTczODk1ZWEiLCJpYXQiOjE3MDk5MDcxNjYsImV4cCI6MTcwOTkxMDc2Nn0.QMUHWnHJ3RCu66yCFjbZSX67shQxq2kbuEsRvGuLflA"
                 }
             ],
             "params": [],
