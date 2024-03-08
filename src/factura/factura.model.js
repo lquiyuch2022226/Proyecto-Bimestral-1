@@ -25,6 +25,10 @@ const FacturaSchema = mongoose.Schema({
         ref: 'User',
         required: true
     },
+    estado: {
+        type: Boolean,
+        default: true
+    }
 });
 
 FacturaSchema.methods.toJSON = function(){

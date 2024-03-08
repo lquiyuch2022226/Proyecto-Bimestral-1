@@ -100,11 +100,8 @@ export const pagarProductos = async (req, res) => {
     try {
         const { id } = req.params;
         const userId = req.usuario._id;
-        //const query = { _id: id, userId: userId };
 
-
-        const carrito = await Factura.findById(id).populate('carritoWithProducts.product');;
-
+        const carrito = await Factura.findById(id).populate('carritoWithProducts.product');
 
         for (const item of carrito.carritoWithProducts) {
             const product = item.product;
@@ -115,15 +112,40 @@ export const pagarProductos = async (req, res) => {
             await product.save();
         }
 
-        carrito.carritoWithProducts = [];
+        carrito.estado = 'false';
         await carrito.save();
 
         res.status(200).json({
-            msg: 'Payment successful. Stock updated and sales recorded.'
+            msg: 'Payment successful. Stock updated and sales recorded',
+            carrito
         });
 
     } catch (error) {
         console.log(error)
         res.status(400).json( {error} );
     }
+}
+
+export const facturasGetByUser = async (req, res) => {
+    const { limite, desde } = req.query;
+    const userId = req.usuario._id;
+    const query = { userId: userId, estado: false};
+
+    const [total, facturas] = await Promise.all([
+        Factura.countDocuments(query),
+        Factura.find(query)
+            .populate({
+                path: 'carritoWithProducts.product',
+                select: 'nameProduct price -_id'
+            })
+            .select('-estado')
+            .select('-date')
+            .skip(Number(desde))
+            .limit(Number(limite))
+    ]);
+
+    res.status(200).json({
+        total,
+        facturas
+    });
 }

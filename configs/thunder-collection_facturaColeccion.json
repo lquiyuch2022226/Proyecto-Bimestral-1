@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "facturaColeccion",
-    "dateExported": "2024-03-08T14:17:47.736Z",
+    "dateExported": "2024-03-08T14:48:44.784Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -10,15 +10,34 @@
             "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
             "containerId": "",
             "name": "pagar Productos",
-            "url": "http://localhost:3000/ventasApi/v1/factura/65eb00acaa95962ca54fc720",
+            "url": "http://localhost:3000/ventasApi/v1/factura/65eb23f414e5cacf61218db8",
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-03-08T12:17:08.333Z",
-            "modified": "2024-03-08T14:12:55.656Z",
+            "modified": "2024-03-08T14:44:23.060Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmRhMTVhNDY5Mzc4YTczODk1ZWEiLCJpYXQiOjE3MDk5MDcxNjYsImV4cCI6MTcwOTkxMDc2Nn0.QMUHWnHJ3RCu66yCFjbZSX67shQxq2kbuEsRvGuLflA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViMjNlMTE0ZTVjYWNmNjEyMThkYjAiLCJpYXQiOjE3MDk5MDg5NjksImV4cCI6MTcwOTkxMjU2OX0._upa1_bZ2Mw2PdvnPT5Os-5psUGvzgwxUe5qvtVtVgk"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "278db423-e8dd-45ef-a484-b3fdcafac8e0",
+            "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
+            "containerId": "",
+            "name": "compras Realizadas",
+            "url": "http://localhost:3000/ventasApi/v1/factura/get/comprasByUser",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-08T14:47:44.964Z",
+            "modified": "2024-03-08T14:48:22.064Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViMjNlMTE0ZTVjYWNmNjEyMThkYjAiLCJpYXQiOjE3MDk5MDg5NjksImV4cCI6MTcwOTkxMjU2OX0._upa1_bZ2Mw2PdvnPT5Os-5psUGvzgwxUe5qvtVtVgk"
                 }
             ],
             "params": [],

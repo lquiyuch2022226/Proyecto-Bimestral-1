@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productosColeccion",
-    "dateExported": "2024-03-08T14:18:13.980Z",
+    "dateExported": "2024-03-08T14:20:43.698Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -73,17 +73,17 @@
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-03-07T03:14:23.226Z",
-            "modified": "2024-03-08T08:39:37.491Z",
+            "modified": "2024-03-08T14:20:26.008Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MzEyYWRmZDRhZDJhMzAxNjJlYWMiLCJpYXQiOjE3MDk3ODE1NTAsImV4cCI6MTcwOTc4NTE1MH0.mNwV9fVIjv_GovO3hDhn3dvNt5JCNl59CVybT3ldHmE"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmQ5OTVhNDY5Mzc4YTczODk1ZTciLCJpYXQiOjE3MDk5MDc2MTgsImV4cCI6MTcwOTkxMTIxOH0.-AwgxSOzMjZye6AEGZH9JwVV-ZANWAUtnUmu80n4OSs"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameProduct\": \"Sopa Laky\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 8,\n  \"category\": \"Comida\",\n  \"stock\": 20\n}",
+                "raw": "{\n  \"nameProduct\": \"Sopa Laky\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 5,\n  \"category\": \"Comida\",\n  \"stock\": 20\n}",
                 "form": []
             },
             "reqType": "put",

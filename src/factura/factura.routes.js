@@ -8,7 +8,8 @@ import { esRole } from '../middlewares/validar-roles.js';
 import {
     agregarProductoAlCarrito,
     facturasGet,
-    pagarProductos
+    pagarProductos,
+    facturasGetByUser
 } from '../factura/factura.controller.js'
 
 const router = Router();
@@ -40,6 +41,14 @@ router.get(
         check('id', 'Invalid ID, try another').isMongoId(),
         check('id').custom(existeFacturaById)
     ],pagarProductos
+);
+
+router.get(
+    "/get/comprasByUser",
+    [
+        validarJWT, 
+        esRole("CLIENT_ROLE"),
+    ],facturasGetByUser
 );
 
 export default router;
