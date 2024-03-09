@@ -23,10 +23,11 @@ export const agregarProductoAlCarrito = async (req, res) => {
             });
         }
 
-        let carrito = await Factura.findOne({ userId });
-
-        if (!carrito || carrito.estado === "false") {
-            console.log(!carrito.estado)
+        let carrito = await Factura.findOne({ userId, estado: true});
+        //console.log(userId);
+        //console.log(carrito.estado);
+        if (!carrito || !carrito.estado) {
+            console.log(carrito)
             const newCarrito = new Factura({
                 carritoWithProducts: [{
                     product: product._id,

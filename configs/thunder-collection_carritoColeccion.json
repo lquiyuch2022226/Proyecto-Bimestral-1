@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "carritoColeccion",
-    "dateExported": "2024-03-08T14:17:51.542Z",
+    "dateExported": "2024-03-09T02:43:35.551Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,19 +14,20 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-08T09:42:13.170Z",
-            "modified": "2024-03-08T14:16:27.288Z",
+            "modified": "2024-03-09T02:35:44.341Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmRhMTVhNDY5Mzc4YTczODk1ZWEiLCJpYXQiOjE3MDk5MDczNzYsImV4cCI6MTcwOTkxMDk3Nn0.TWqRdzN1KcDoxBCVmTWOwcIuFaWG894QKsvhVagETGk"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViY2FlMmQxNmQwMTBkMDY1MjI3NDAiLCJpYXQiOjE3MDk5NTE3MjksImV4cCI6MTcwOTk1NTMyOX0.AIxnkxrpYU99avJgubKcjRHdr144tiLWUPgrG4siaC8"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"productName\": \"Sopa Laky 3\",\n  \"howManyProducts\": \"5\"\n}",
+                "raw": "{\n  \"productName\": \"Sopa Laky\",\n  \"howManyProducts\": \"1\"\n}",
                 "form": []
             },
+            "reqType": "post",
             "tests": []
         },
         {
@@ -38,14 +39,15 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-08T11:31:53.012Z",
-            "modified": "2024-03-08T14:13:24.364Z",
+            "modified": "2024-03-09T02:39:36.313Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmRhMTVhNDY5Mzc4YTczODk1ZWEiLCJpYXQiOjE3MDk5MDcxNjYsImV4cCI6MTcwOTkxMDc2Nn0.QMUHWnHJ3RCu66yCFjbZSX67shQxq2kbuEsRvGuLflA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViY2FlMmQxNmQwMTBkMDY1MjI3NDAiLCJpYXQiOjE3MDk5NTE3MjksImV4cCI6MTcwOTk1NTMyOX0.AIxnkxrpYU99avJgubKcjRHdr144tiLWUPgrG4siaC8"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         }
     ]

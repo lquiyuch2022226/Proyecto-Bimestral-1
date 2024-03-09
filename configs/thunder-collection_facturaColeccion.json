@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "facturaColeccion",
-    "dateExported": "2024-03-08T14:48:44.784Z",
+    "dateExported": "2024-03-09T02:43:42.272Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -10,18 +10,19 @@
             "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
             "containerId": "",
             "name": "pagar Productos",
-            "url": "http://localhost:3000/ventasApi/v1/factura/65eb23f414e5cacf61218db8",
+            "url": "http://localhost:3000/ventasApi/v1/factura/65ebcc45d16d010d065227ea",
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-03-08T12:17:08.333Z",
-            "modified": "2024-03-08T14:44:23.060Z",
+            "modified": "2024-03-09T02:41:30.429Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViMjNlMTE0ZTVjYWNmNjEyMThkYjAiLCJpYXQiOjE3MDk5MDg5NjksImV4cCI6MTcwOTkxMjU2OX0._upa1_bZ2Mw2PdvnPT5Os-5psUGvzgwxUe5qvtVtVgk"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViY2FlMmQxNmQwMTBkMDY1MjI3NDAiLCJpYXQiOjE3MDk5NTE3MjksImV4cCI6MTcwOTk1NTMyOX0.AIxnkxrpYU99avJgubKcjRHdr144tiLWUPgrG4siaC8"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         },
         {
@@ -33,14 +34,15 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-08T14:47:44.964Z",
-            "modified": "2024-03-08T14:48:22.064Z",
+            "modified": "2024-03-09T02:40:26.892Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViMjNlMTE0ZTVjYWNmNjEyMThkYjAiLCJpYXQiOjE3MDk5MDg5NjksImV4cCI6MTcwOTkxMjU2OX0._upa1_bZ2Mw2PdvnPT5Os-5psUGvzgwxUe5qvtVtVgk"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViY2FlMmQxNmQwMTBkMDY1MjI3NDAiLCJpYXQiOjE3MDk5NTE3MjksImV4cCI6MTcwOTk1NTMyOX0.AIxnkxrpYU99avJgubKcjRHdr144tiLWUPgrG4siaC8"
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         }
     ]

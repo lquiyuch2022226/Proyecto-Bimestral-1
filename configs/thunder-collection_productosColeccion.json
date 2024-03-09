@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productosColeccion",
-    "dateExported": "2024-03-08T14:20:43.698Z",
+    "dateExported": "2024-03-09T02:43:21.574Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-07T03:14:23.223Z",
-            "modified": "2024-03-08T14:18:10.491Z",
+            "modified": "2024-03-09T02:34:56.877Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmQ5OTVhNDY5Mzc4YTczODk1ZTciLCJpYXQiOjE3MDk5MDcyNTYsImV4cCI6MTcwOTkxMDg1Nn0.LBMMPPIUUmNS78_gZedJVUmmr6nQK_G2pnEMjBxqlBQ"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViY2FiNzJiZTM5ZTQxM2RkMDJmYTYiLCJpYXQiOjE3MDk5NTE2ODEsImV4cCI6MTcwOTk1NTI4MX0.CLKUogIImHElw1NhureJe0N0quPjoMURSPE5sPMw28c"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameProduct\": \"Sopa Laky\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 5,\n  \"category\": \"Comida\",\n  \"stock\": 10\n}",
+                "raw": "{\n  \"nameProduct\": \"Sopa Laky\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 5,\n  \"category\": \"Comida\",\n  \"stock\": 15\n}",
                 "form": []
             },
             "reqType": "post",
@@ -49,15 +49,15 @@
             "colId": "818db446-c202-4b87-b11e-625ebca3b626",
             "containerId": "",
             "name": "product GetByName",
-            "url": "http://localhost:3000/ventasApi/v1/product/Sopa Laky 2",
+            "url": "http://localhost:3000/ventasApi/v1/product/Sopa Laky",
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-03-07T03:14:23.225Z",
-            "modified": "2024-03-07T03:27:07.196Z",
+            "modified": "2024-03-08T14:20:54.210Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MzEyYWRmZDRhZDJhMzAxNjJlYWMiLCJpYXQiOjE3MDk3ODE1NTAsImV4cCI6MTcwOTc4NTE1MH0.mNwV9fVIjv_GovO3hDhn3dvNt5JCNl59CVybT3ldHmE"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmQ5OTVhNDY5Mzc4YTczODk1ZTciLCJpYXQiOjE3MDk5MDc2MTgsImV4cCI6MTcwOTkxMTIxOH0.-AwgxSOzMjZye6AEGZH9JwVV-ZANWAUtnUmu80n4OSs"
                 }
             ],
             "params": [],
@@ -73,11 +73,11 @@
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-03-07T03:14:23.226Z",
-            "modified": "2024-03-08T14:20:26.008Z",
+            "modified": "2024-03-09T02:40:43.470Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmQ5OTVhNDY5Mzc4YTczODk1ZTciLCJpYXQiOjE3MDk5MDc2MTgsImV4cCI6MTcwOTkxMTIxOH0.-AwgxSOzMjZye6AEGZH9JwVV-ZANWAUtnUmu80n4OSs"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViY2FlMmQxNmQwMTBkMDY1MjI3NDAiLCJpYXQiOjE3MDk5NTE3MjksImV4cCI6MTcwOTk1NTMyOX0.AIxnkxrpYU99avJgubKcjRHdr144tiLWUPgrG4siaC8"
                 }
             ],
             "params": [],
