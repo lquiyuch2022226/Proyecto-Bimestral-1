@@ -42,7 +42,7 @@ router.get(
     "/:name",
     [
         validarJWT,
-        esRole("ADMIN_ROLE"),
+        esRole("ADMIN_ROLE", "CLIENT_ROLE"),
         check('name').custom(esProductoValido),
     ],
     productGetByName
@@ -52,6 +52,7 @@ router.put(
     "/:name",
     [
         validarJWT,
+        esRole("ADMIN_ROLE"),
         check('name').custom(esProductoValido),
         check('price').custom(pricePositivo),
         check('category').custom(asignarCategoria),
@@ -93,7 +94,7 @@ router.get(
     "/get/productsMostSelled",
     [
         validarJWT,
-        esRole("ADMIN_ROLE"),
+        esRole("ADMIN_ROLE", "CLIENT_ROLE"),
     ],
     productsMostSelled
 );

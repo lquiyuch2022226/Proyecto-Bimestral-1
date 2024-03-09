@@ -26,7 +26,7 @@ router.post(
     ], categoryPost
 );
 
-router.get( "/", [ validarJWT, esRole("ADMIN_ROLE") ], 
+router.get( "/", [ validarJWT, esRole("ADMIN_ROLE", "CLIENT_ROLE") ], 
     categoriesGet);
 
 router.put(
