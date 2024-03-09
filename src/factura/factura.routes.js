@@ -35,7 +35,7 @@ router.get("/",
 );
 
 router.get(
-    "/:id",
+    "/pagar/:id",
     [
         validarJWT, 
         esRole("CLIENT_ROLE"),

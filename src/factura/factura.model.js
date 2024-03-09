@@ -24,6 +24,9 @@ const FacturaSchema = mongoose.Schema({
     estado: {
         type: Boolean,
         default: true
+    },
+    total:{
+        type: Number
     }
 });
 

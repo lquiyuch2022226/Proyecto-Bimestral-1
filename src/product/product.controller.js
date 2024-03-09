@@ -57,13 +57,15 @@ export const productPut = async (req, res) => {
     const { _id, estado, category, ...resto } = req.body;
 
     const producto = await Product.findOne({ nameProduct: name });
-
+    const categoryFound = await Category.findOne({ nameCategory: category });
+  
     if (!producto.estado) {
         return res.status(400).json({
             msg: "This PRODUCT don't exists because was deleted",
         });
     }
 
+    resto.category = categoryFound._id;
     const productoActualizado = await Product.findByIdAndUpdate(producto._id, resto, { new: true });
 
     res.status(200).json({

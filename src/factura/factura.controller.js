@@ -6,6 +6,7 @@ export const agregarProductoAlCarrito = async (req, res) => {
     try {
         const { productName, howManyProducts } = req.body;
         const userId = req.usuario._id;
+        let total = 0;
 
         const product = await Product.findOne({ nameProduct: productName });
 
@@ -64,9 +65,17 @@ export const agregarProductoAlCarrito = async (req, res) => {
             await carrito.save();
         }
 
+        for (const item of carrito.carritoWithProducts) {
+            total += item.subtotal;
+        }
+        carrito.total = total;
+
+        await carrito.save();
+
         res.status(200).json({
             carrito
         });
+
     } catch (error) {
         console.log(error)
     }
@@ -103,7 +112,7 @@ export const pagarProductos = async (req, res) => {
         const userId = req.usuario._id;
 
         const carrito = await Factura.findById(id).populate('carritoWithProducts.product');
-
+        console.log(carrito, 'xddddddddd');
         if (!carrito.estado) {
             return res.status(400).json({
                 msg: 'This factura was already canceled :)'
@@ -166,6 +175,7 @@ export const facturasHistory = async (req, res) => {
 export const facturaPut = async (req, res) => {
     const { id } = req.params;
     const { productName, howManyProducts } = req.body;
+    let total = 0;
 
     const producto = await Product.findOne({ nameProduct: productName });
 
@@ -191,8 +201,14 @@ export const facturaPut = async (req, res) => {
         });
     }
 
+    for (const item of factura.carritoWithProducts) {
+        total += item.subtotal;
+    }
+    factura.total = total;
+
+
     await factura.save();
-    
+
     res.status(200).json({
         msg: 'This FACTURA was UPDATED:',
         factura
