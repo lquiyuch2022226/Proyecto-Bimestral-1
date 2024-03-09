@@ -24,8 +24,7 @@ export const agregarProductoAlCarrito = async (req, res) => {
         }
 
         let carrito = await Factura.findOne({ userId, estado: true});
-        //console.log(userId);
-        //console.log(carrito.estado);
+
         if (!carrito || !carrito.estado) {
             console.log(carrito)
             const newCarrito = new Factura({
@@ -105,6 +104,18 @@ export const pagarProductos = async (req, res) => {
 
         const carrito = await Factura.findById(id).populate('carritoWithProducts.product');
 
+        if(!carrito.estado){
+            return res.status(400).json({
+                msg: 'This factura was already canceled :)'
+            });
+        }
+
+        if(userId.toString() !== carrito.userId.toString()){
+            return res.status(400).json({
+                msg: 'This is not your factura, plis give me a factura that are from you'
+            });
+        }
+
         for (const item of carrito.carritoWithProducts) {
             const product = item.product;
             const cantidadComprada = item.howManyProducts;
@@ -128,7 +139,7 @@ export const pagarProductos = async (req, res) => {
     }
 }
 
-export const facturasGetByUser = async (req, res) => {
+export const facturasHistory = async (req, res) => {
     const { limite, desde } = req.query;
     const userId = req.usuario._id;
     const query = { userId: userId, estado: false};

@@ -9,7 +9,7 @@ import {
     agregarProductoAlCarrito,
     facturasGet,
     pagarProductos,
-    facturasGetByUser
+    facturasHistory
 } from '../factura/factura.controller.js'
 
 const router = Router();
@@ -48,7 +48,7 @@ router.get(
     [
         validarJWT, 
         esRole("CLIENT_ROLE"),
-    ],facturasGetByUser
+    ],facturasHistory
 );
 
 export default router;
