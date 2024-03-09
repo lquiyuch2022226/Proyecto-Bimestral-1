@@ -1,24 +1,24 @@
 {
     "client": "Thunder Client",
     "collectionName": "productosColeccion",
-    "dateExported": "2024-03-09T04:38:13.191Z",
+    "dateExported": "2024-03-09T05:49:17.727Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "83ee64e3-d568-4a91-a3e8-36893b8b13a5",
-            "colId": "818db446-c202-4b87-b11e-625ebca3b626",
+            "_id": "7451fea3-b35a-4927-bb85-706b8d460ef2",
+            "colId": "e8c391f0-8f80-401b-954d-9f400e8d2c94",
             "containerId": "",
             "name": "product Post",
             "url": "http://localhost:3000/ventasApi/v1/product",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-07T03:14:23.223Z",
-            "modified": "2024-03-09T04:38:10.661Z",
+            "created": "2024-03-09T04:57:29.951Z",
+            "modified": "2024-03-09T05:48:55.903Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZTI5ZDg4MjcyZWQ0OWQ0MTIxOTciLCJpYXQiOjE3MDk5NTgwNTMsImV4cCI6MTcwOTk2MTY1M30.V4YEbNDx_WEdzIw-D7ewT4lNBKHwlE2lMzpHHKP9Eeg"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWIxMmUxNGViMTdhMWZmNTg0YjIiLCJpYXQiOjE3MDk5NjIwNjIsImV4cCI6MTcwOTk2NTY2Mn0.GKIxz7zGDyLnWdJZFSsES8YqjN-zRfta3N0SnBWuyFY"
                 }
             ],
             "params": [],
@@ -31,33 +31,33 @@
             "tests": []
         },
         {
-            "_id": "29a8d5ef-17ea-4480-a6cc-1341418789af",
-            "colId": "818db446-c202-4b87-b11e-625ebca3b626",
+            "_id": "2aa2f356-14d0-4329-ae3b-725f29ce248a",
+            "colId": "e8c391f0-8f80-401b-954d-9f400e8d2c94",
             "containerId": "",
             "name": "product Get",
             "url": "http://localhost:3000/ventasApi/v1/product",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-07T03:14:23.224Z",
-            "modified": "2024-03-07T03:14:23.224Z",
+            "created": "2024-03-09T04:57:29.953Z",
+            "modified": "2024-03-09T04:57:29.953Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "0c417852-e1e9-4fa9-b085-8308528cfe45",
-            "colId": "818db446-c202-4b87-b11e-625ebca3b626",
+            "_id": "0760e0e6-3b8b-4c1b-9a72-bb96751d65e5",
+            "colId": "e8c391f0-8f80-401b-954d-9f400e8d2c94",
             "containerId": "",
             "name": "product GetByName",
             "url": "http://localhost:3000/ventasApi/v1/product/Sopa Laky",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-07T03:14:23.225Z",
-            "modified": "2024-03-08T14:20:54.210Z",
+            "created": "2024-03-09T04:57:29.954Z",
+            "modified": "2024-03-09T05:10:55.878Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmQ5OTVhNDY5Mzc4YTczODk1ZTciLCJpYXQiOjE3MDk5MDc2MTgsImV4cCI6MTcwOTkxMTIxOH0.-AwgxSOzMjZye6AEGZH9JwVV-ZANWAUtnUmu80n4OSs"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWNjMTA0MmQyNmMxZWE3NzllMjUiLCJpYXQiOjE3MDk5NjEwMzYsImV4cCI6MTcwOTk2NDYzNn0.2glfCGU1zy_wNya4cnyn_4T3P74k6MjiTgtblOs1SwM"
                 }
             ],
             "params": [],
@@ -65,19 +65,19 @@
             "tests": []
         },
         {
-            "_id": "e03e58ca-dbc2-4b28-9c60-ef6e7bf497c6",
-            "colId": "818db446-c202-4b87-b11e-625ebca3b626",
+            "_id": "24285ba9-0bf9-429d-be93-94ff86833e8e",
+            "colId": "e8c391f0-8f80-401b-954d-9f400e8d2c94",
             "containerId": "",
             "name": "product Put",
             "url": "http://localhost:3000/ventasApi/v1/product/Sopa Laky",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-03-07T03:14:23.226Z",
-            "modified": "2024-03-09T04:29:32.137Z",
+            "created": "2024-03-09T04:57:29.955Z",
+            "modified": "2024-03-09T05:13:48.995Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZTI5ZDg4MjcyZWQ0OWQ0MTIxOTciLCJpYXQiOjE3MDk5NTgyMDAsImV4cCI6MTcwOTk2MTgwMH0.s_De4t2-R-9XZrbn-i9JIKgjI8ROQa7GEWgi85zuLVU"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWIxMmUxNGViMTdhMWZmNTg0YjIiLCJpYXQiOjE3MDk5NjEyMjEsImV4cCI6MTcwOTk2NDgyMX0.btDf9SXfzpu3urd8T0QmSeWFMP3_Q_WN3Mxwt4xM9Wg"
                 }
             ],
             "params": [],
@@ -90,38 +90,39 @@
             "tests": []
         },
         {
-            "_id": "76a9a7af-6569-45e2-a2f7-f90cabf0e707",
-            "colId": "818db446-c202-4b87-b11e-625ebca3b626",
+            "_id": "13ba3197-97d7-428e-acea-a0bcd307ec04",
+            "colId": "e8c391f0-8f80-401b-954d-9f400e8d2c94",
             "containerId": "",
             "name": "product Delete",
-            "url": "http://localhost:3000/ventasApi/v1/product/Sopa Laky 2",
+            "url": "http://localhost:3000/ventasApi/v1/product/Sopa Laky",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-07T03:28:56.971Z",
-            "modified": "2024-03-07T03:39:26.738Z",
+            "created": "2024-03-09T04:57:29.956Z",
+            "modified": "2024-03-09T05:49:10.728Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MzEyYWRmZDRhZDJhMzAxNjJlYWMiLCJpYXQiOjE3MDk3ODE1NTAsImV4cCI6MTcwOTc4NTE1MH0.mNwV9fVIjv_GovO3hDhn3dvNt5JCNl59CVybT3ldHmE"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWNjMTA0MmQyNmMxZWE3NzllMjUiLCJpYXQiOjE3MDk5NjEwMzYsImV4cCI6MTcwOTk2NDYzNn0.2glfCGU1zy_wNya4cnyn_4T3P74k6MjiTgtblOs1SwM"
                 }
             ],
             "params": [],
+            "reqType": "del",
             "tests": []
         },
         {
-            "_id": "384b79c1-c91b-4c6e-a6f4-e42d05cb0981",
-            "colId": "818db446-c202-4b87-b11e-625ebca3b626",
+            "_id": "70d113b7-8704-4def-a785-0a1243a9e05c",
+            "colId": "e8c391f0-8f80-401b-954d-9f400e8d2c94",
             "containerId": "",
             "name": "product Inventory",
             "url": "http://localhost:3000/ventasApi/v1/product/get/inventory",
             "method": "GET",
             "sortNum": 60000,
-            "created": "2024-03-07T03:48:26.152Z",
-            "modified": "2024-03-08T14:15:10.305Z",
+            "created": "2024-03-09T04:57:29.957Z",
+            "modified": "2024-03-09T05:11:53.056Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmQ5OTVhNDY5Mzc4YTczODk1ZTciLCJpYXQiOjE3MDk5MDcyNTYsImV4cCI6MTcwOTkxMDg1Nn0.LBMMPPIUUmNS78_gZedJVUmmr6nQK_G2pnEMjBxqlBQ"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWNjMTA0MmQyNmMxZWE3NzllMjUiLCJpYXQiOjE3MDk5NjEwMzYsImV4cCI6MTcwOTk2NDYzNn0.2glfCGU1zy_wNya4cnyn_4T3P74k6MjiTgtblOs1SwM"
                 }
             ],
             "params": [],
@@ -129,15 +130,15 @@
             "tests": []
         },
         {
-            "_id": "138a889d-080e-4b60-babd-66acacf29efa",
-            "colId": "818db446-c202-4b87-b11e-625ebca3b626",
+            "_id": "dbd962d0-0382-4182-833b-df49251c80c6",
+            "colId": "e8c391f0-8f80-401b-954d-9f400e8d2c94",
             "containerId": "",
             "name": "products OutOfStock",
             "url": "http://localhost:3000/ventasApi/v1/product/get/productOutOfStock",
             "method": "GET",
             "sortNum": 70000,
-            "created": "2024-03-07T03:58:35.157Z",
-            "modified": "2024-03-08T14:14:24.494Z",
+            "created": "2024-03-09T04:57:29.958Z",
+            "modified": "2024-03-09T05:11:59.214Z",
             "headers": [
                 {
                     "name": "User-Agent",
@@ -145,7 +146,7 @@
                 },
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmQ5OTVhNDY5Mzc4YTczODk1ZTciLCJpYXQiOjE3MDk5MDcyNTYsImV4cCI6MTcwOTkxMDg1Nn0.LBMMPPIUUmNS78_gZedJVUmmr6nQK_G2pnEMjBxqlBQ"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWNjMTA0MmQyNmMxZWE3NzllMjUiLCJpYXQiOjE3MDk5NjEwMzYsImV4cCI6MTcwOTk2NDYzNn0.2glfCGU1zy_wNya4cnyn_4T3P74k6MjiTgtblOs1SwM"
                 }
             ],
             "params": [],
@@ -153,19 +154,19 @@
             "tests": []
         },
         {
-            "_id": "cde7f77b-caf0-4fdf-9437-ad6fb9c6e1ea",
-            "colId": "818db446-c202-4b87-b11e-625ebca3b626",
+            "_id": "c20110f8-bad4-4b0b-9f9b-e1bedf082cdc",
+            "colId": "e8c391f0-8f80-401b-954d-9f400e8d2c94",
             "containerId": "",
             "name": "products MostSelled",
             "url": "http://localhost:3000/ventasApi/v1/product/get/productsMostSelled",
             "method": "GET",
             "sortNum": 80000,
-            "created": "2024-03-07T04:09:02.160Z",
-            "modified": "2024-03-08T14:14:38.095Z",
+            "created": "2024-03-09T04:57:29.959Z",
+            "modified": "2024-03-09T05:12:10.222Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhZmQ5OTVhNDY5Mzc4YTczODk1ZTciLCJpYXQiOjE3MDk5MDcyNTYsImV4cCI6MTcwOTkxMDg1Nn0.LBMMPPIUUmNS78_gZedJVUmmr6nQK_G2pnEMjBxqlBQ"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWNjMTA0MmQyNmMxZWE3NzllMjUiLCJpYXQiOjE3MDk5NjEwMzYsImV4cCI6MTcwOTk2NDYzNn0.2glfCGU1zy_wNya4cnyn_4T3P74k6MjiTgtblOs1SwM"
                 }
             ],
             "params": [],

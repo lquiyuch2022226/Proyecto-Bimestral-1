@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "carritoColeccion",
-    "dateExported": "2024-03-09T05:28:12.900Z",
+    "dateExported": "2024-03-09T05:49:37.965Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -116,7 +116,7 @@
             "method": "GET",
             "sortNum": 60000,
             "created": "2024-03-09T05:23:17.622Z",
-            "modified": "2024-03-09T05:27:11.811Z",
+            "modified": "2024-03-09T05:49:31.256Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -124,6 +124,7 @@
                 }
             ],
             "params": [],
+            "reqType": "get",
             "tests": []
         }
     ]

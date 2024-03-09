@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "usuariosColeccion",
-    "dateExported": "2024-03-09T04:38:02.891Z",
+    "dateExported": "2024-03-09T05:48:22.358Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "593eaa94-9fd5-4a72-9ac2-cfa559d0612e",
-            "colId": "1cb113a7-1cc1-48f3-ae35-7ada97255981",
+            "_id": "6f763763-9047-4a70-a7c0-db5c29cee1fb",
+            "colId": "6b564e9c-ad8b-4392-bd72-141376bb5456",
             "containerId": "",
             "name": "usuario Post",
             "url": "http://localhost:3000/ventasApi/v1/user",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-07T03:14:23.261Z",
-            "modified": "2024-03-09T04:37:59.963Z",
+            "created": "2024-03-09T04:57:30.000Z",
+            "modified": "2024-03-09T04:57:30.000Z",
             "headers": [],
             "params": [],
             "body": {
@@ -22,48 +22,46 @@
                 "raw": "{\n  \"nombre\": \"usuario1\",\n  \"correo\": \"usuario1@gmail.com\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
-            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "fd17411b-fa93-48c9-a739-79050352be77",
-            "colId": "1cb113a7-1cc1-48f3-ae35-7ada97255981",
+            "_id": "d95973ab-4cf1-4c46-9b04-02a045d5e245",
+            "colId": "6b564e9c-ad8b-4392-bd72-141376bb5456",
             "containerId": "",
             "name": "usuarios Get",
             "url": "http://localhost:3000/ventasApi/v1/user/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-07T03:14:23.262Z",
-            "modified": "2024-03-07T03:14:23.262Z",
+            "created": "2024-03-09T04:57:30.001Z",
+            "modified": "2024-03-09T04:57:30.001Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "92555821-b45b-4fcf-88ab-ebd97bd83b9d",
-            "colId": "1cb113a7-1cc1-48f3-ae35-7ada97255981",
+            "_id": "817a96fb-e2fe-4109-88bc-d5a2f4096312",
+            "colId": "6b564e9c-ad8b-4392-bd72-141376bb5456",
             "containerId": "",
             "name": "usuario GetById",
             "url": "http://localhost:3000/ventasApi/v1/user/65ebe29d88272ed49d412197",
             "method": "GET",
             "sortNum": 50000,
-            "created": "2024-03-07T03:14:23.263Z",
-            "modified": "2024-03-09T04:17:05.438Z",
+            "created": "2024-03-09T04:57:30.002Z",
+            "modified": "2024-03-09T04:57:30.002Z",
             "headers": [],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "9dd9683b-8e98-4e13-b1ed-1e169314dbf1",
-            "colId": "1cb113a7-1cc1-48f3-ae35-7ada97255981",
+            "_id": "fe0af94c-787f-488f-b951-33e124acdc26",
+            "colId": "6b564e9c-ad8b-4392-bd72-141376bb5456",
             "containerId": "",
             "name": "usuario Put",
             "url": "http://localhost:3000/ventasApi/v1/user/65ebe2ae88272ed49d41219e",
             "method": "PUT",
             "sortNum": 60000,
-            "created": "2024-03-07T03:14:23.264Z",
-            "modified": "2024-03-09T04:19:38.163Z",
+            "created": "2024-03-09T04:57:30.003Z",
+            "modified": "2024-03-09T04:57:30.003Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -76,19 +74,18 @@
                 "raw": "{\n  \"nombre\": \"usuario PUT\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
                 "form": []
             },
-            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "ddbac574-ca79-4fc7-b84b-d61055d74193",
-            "colId": "1cb113a7-1cc1-48f3-ae35-7ada97255981",
+            "_id": "0112e787-6b04-4dbf-8a46-9fa4189512df",
+            "colId": "6b564e9c-ad8b-4392-bd72-141376bb5456",
             "containerId": "",
             "name": "usuario Delete",
             "url": "http://localhost:3000/ventasApi/v1/user/65ebe2ae88272ed49d41219e",
             "method": "DELETE",
             "sortNum": 70000,
-            "created": "2024-03-07T03:14:23.265Z",
-            "modified": "2024-03-09T04:20:01.955Z",
+            "created": "2024-03-09T04:57:30.004Z",
+            "modified": "2024-03-09T04:57:30.004Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -96,7 +93,6 @@
                 }
             ],
             "params": [],
-            "reqType": "del",
             "tests": []
         }
     ]

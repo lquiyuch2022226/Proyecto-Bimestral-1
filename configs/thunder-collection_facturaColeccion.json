@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "facturaColeccion",
-    "dateExported": "2024-03-09T04:37:44.287Z",
+    "dateExported": "2024-03-09T05:49:45.488Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "75cf26af-5582-4b23-996e-024c8718a7d5",
-            "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
+            "_id": "ffb94445-7b2e-4ba5-a284-e989478a0faa",
+            "colId": "c8b5a6ae-e4e8-407e-8e15-a0c929f6d212",
             "containerId": "",
             "name": "pagar Productos",
             "url": "http://localhost:3000/ventasApi/v1/factura/65ebe3cc88272ed49d4121cf",
             "method": "GET",
             "sortNum": 10000,
-            "created": "2024-03-08T12:17:08.333Z",
-            "modified": "2024-03-09T04:22:12.961Z",
+            "created": "2024-03-09T04:57:29.873Z",
+            "modified": "2024-03-09T04:57:29.873Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -22,19 +22,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "278db423-e8dd-45ef-a484-b3fdcafac8e0",
-            "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
+            "_id": "d985c814-8eac-483c-99d2-7d121b61a07a",
+            "colId": "c8b5a6ae-e4e8-407e-8e15-a0c929f6d212",
             "containerId": "",
             "name": "historial Compras",
             "url": "http://localhost:3000/ventasApi/v1/factura/get/comprasByUser",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-08T14:47:44.964Z",
-            "modified": "2024-03-09T04:22:46.737Z",
+            "created": "2024-03-09T04:57:29.874Z",
+            "modified": "2024-03-09T04:57:29.874Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -42,19 +41,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "9d9dcee8-0ba7-4c2e-aaa2-c5ad2e291b1f",
-            "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
+            "_id": "f375a730-f8c4-4ec2-853b-57a752e37743",
+            "colId": "c8b5a6ae-e4e8-407e-8e15-a0c929f6d212",
             "containerId": "",
             "name": "factura Put",
             "url": "http://localhost:3000/ventasApi/v1/factura/65ebe3cc88272ed49d4121cf",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-09T03:42:41.812Z",
-            "modified": "2024-03-09T04:37:27.915Z",
+            "created": "2024-03-09T04:57:29.875Z",
+            "modified": "2024-03-09T04:57:29.875Z",
             "headers": [
                 {
                     "name": "x-token",
