@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "loginColeccion",
-    "dateExported": "2024-03-09T02:43:15.390Z",
+    "dateExported": "2024-03-09T05:45:14.437Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "8404d5c6-0dab-4f75-9fea-990386d37431",
-            "colId": "4ed00cfb-c302-42cf-a39f-47bf1cf462fc",
+            "_id": "70e85ae1-6244-4bbb-929a-3d301f7fa5c6",
+            "colId": "399c1037-c8c1-4438-8951-a6cec529b22d",
             "containerId": "",
             "name": "login",
             "url": "http://localhost:3000/ventasApi/v1/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-07T03:14:23.186Z",
-            "modified": "2024-03-09T02:43:11.799Z",
+            "created": "2024-03-09T04:57:29.908Z",
+            "modified": "2024-03-09T05:44:19.085Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -24,10 +24,34 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\": \"admin@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "raw": "{\n  \"correo\": \"usuario2@gmail.com\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
             "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "82729379-04d0-472d-b142-ec23dfc33208",
+            "colId": "399c1037-c8c1-4438-8951-a6cec529b22d",
+            "containerId": "",
+            "name": "delete Account",
+            "url": "http://localhost:3000/ventasApi/v1/user/deleteAccount/Client",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-09T05:41:01.394Z",
+            "modified": "2024-03-09T05:45:03.172Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWNjMTA0MmQyNmMxZWE3NzllMjUiLCJpYXQiOjE3MDk5NjMwNDEsImV4cCI6MTcwOTk2NjY0MX0.TiBLoBOg-kUobS_o7xh0RHjX-3UWczv5PqpXx0BnQXQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"confirmacion\": \"CONFIRMO\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

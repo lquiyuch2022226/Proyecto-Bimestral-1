@@ -2,15 +2,17 @@ import { Router } from 'express';
 import { check } from 'express-validator';
 
 import { validarCampos } from '../middlewares/validar-campos.js';
-import { validarJWT } from'../middlewares/validar-jwt.js';
+import { validarJWT } from '../middlewares/validar-jwt.js';
 import { esRole } from '../middlewares/validar-roles.js';
 
-import { 
+import {
     usuarioPost,
-    usuariosGet, 
+    usuariosGet,
     getUsuarioById,
     putUsuarios,
-    usuariosDelete} from '../user/user.controller.js';
+    usuariosDelete,
+    cuentaDelete
+} from '../user/user.controller.js';
 
 import { esRoleValido, existenteEmail, existeUsuarioById } from '../helpers/db-validators.js';
 
@@ -20,9 +22,9 @@ router.post(
     "/",
     [
         check("nombre", "The name is required").not().isEmpty(),
-        check("password","The password is required").not().isEmpty(),
-        check("password","The password needs a minimun of 6 characters").isLength({min:6}),
-        check("correo","Invalid email").isEmail(),
+        check("password", "The password is required").not().isEmpty(),
+        check("password", "The password needs a minimun of 6 characters").isLength({ min: 6 }),
+        check("correo", "Invalid email").isEmail(),
         check("correo").custom(existenteEmail),
         validarCampos
     ], usuarioPost);
@@ -52,12 +54,22 @@ router.put(
 
 router.delete(
     "/:id",
-    [   
+    [
         validarJWT,
         esRole("ADMIN_ROLE"),
         check('id', 'Invalid Id').isMongoId(),
         check('id').custom(existeUsuarioById),
         validarCampos
     ], usuariosDelete);
+
+router.delete(
+    "/deleteAccount/Client",
+    [
+        validarJWT,
+        esRole("CLIENT_ROLE"),
+        check("confirmacion", "The password is required").not().isEmpty(),
+        check("password", "The password is required").not().isEmpty(),
+        validarCampos
+    ], cuentaDelete);
 
 export default router;
