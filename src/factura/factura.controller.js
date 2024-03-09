@@ -17,13 +17,13 @@ export const agregarProductoAlCarrito = async (req, res) => {
 
         const validacionDeSuficienteStock = await stockSuficiente(productName, howManyProducts);
 
-        if(!validacionDeSuficienteStock){
+        if (!validacionDeSuficienteStock) {
             return res.status(400).json({
-                msg: `We don't have enough products to sell you. We only have | ${ product.stock } | products in stock.`
+                msg: `We don't have enough products to sell you. We only have | ${product.stock} | products in stock.`
             });
         }
 
-        let carrito = await Factura.findOne({ userId, estado: true});
+        let carrito = await Factura.findOne({ userId, estado: true });
 
         if (!carrito || !carrito.estado) {
             console.log(carrito)
@@ -47,7 +47,7 @@ export const agregarProductoAlCarrito = async (req, res) => {
 
                 if (!validacionDeSuficienteStockDespues) {
                     return res.status(400).json({
-                        msg: `We don't have enough products to sell you. We only have | ${product.stock} | products in stock.`
+                        msg: `We don't have enough products to sell you. We only have | ${product.stock} | products in stock`
                     });
                 }
 
@@ -75,7 +75,7 @@ export const agregarProductoAlCarrito = async (req, res) => {
 export const facturasGet = async (req, res) => {
     const { limite, desde } = req.query;
     const userId = req.usuario._id;
-    const query = { userId: userId, estado: true};
+    const query = { userId: userId, estado: true };
 
     const [total, facturas] = await Promise.all([
         Factura.countDocuments(query),
@@ -104,13 +104,13 @@ export const pagarProductos = async (req, res) => {
 
         const carrito = await Factura.findById(id).populate('carritoWithProducts.product');
 
-        if(!carrito.estado){
+        if (!carrito.estado) {
             return res.status(400).json({
                 msg: 'This factura was already canceled :)'
             });
         }
 
-        if(userId.toString() !== carrito.userId.toString()){
+        if (userId.toString() !== carrito.userId.toString()) {
             return res.status(400).json({
                 msg: 'This is not your factura, plis give me a factura that are from you'
             });
@@ -135,14 +135,14 @@ export const pagarProductos = async (req, res) => {
 
     } catch (error) {
         console.log(error)
-        res.status(400).json( {error} );
+        res.status(400).json({ error });
     }
 }
 
 export const facturasHistory = async (req, res) => {
     const { limite, desde } = req.query;
     const userId = req.usuario._id;
-    const query = { userId: userId, estado: false};
+    const query = { userId: userId, estado: false };
 
     const [total, facturas] = await Promise.all([
         Factura.countDocuments(query),
@@ -160,5 +160,37 @@ export const facturasHistory = async (req, res) => {
     res.status(200).json({
         total,
         facturas
+    });
+}
+
+export const facturaPut = async (req, res) => {
+    const { id } = req.params;
+    const { productName, howManyProducts } = req.body;
+
+    const producto = await Product.findOne({ nameProduct: productName });
+
+    const validacionDeSuficienteStock = await stockSuficiente(productName, howManyProducts);
+    if (!validacionDeSuficienteStock) {
+        return res.status(400).json({
+            msg: `We don't have enough products to sell you. We only have | ${producto.stock} | products in stock`,
+        });
+    }
+
+    const factura = await Factura.findByIdAndUpdate(id, {
+        $addToSet: {
+            carritoWithProducts: {
+                product: producto._id,
+                howManyProducts,
+                subtotal: producto.price * howManyProducts
+            }
+        }
+    }, { new: true }
+    );
+
+    await factura.save();
+    
+    res.status(200).json({
+        msg: 'This FACTURA was UPDATED:',
+        factura
     });
 }

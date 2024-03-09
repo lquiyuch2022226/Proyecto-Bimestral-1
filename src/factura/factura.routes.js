@@ -9,7 +9,8 @@ import {
     agregarProductoAlCarrito,
     facturasGet,
     pagarProductos,
-    facturasHistory
+    facturasHistory,
+    facturaPut
 } from '../factura/factura.controller.js'
 
 const router = Router();
@@ -30,7 +31,7 @@ router.get("/",
     [
         validarJWT, 
         esRole("CLIENT_ROLE")
-    ],facturasGet
+    ], facturasGet
 );
 
 router.get(
@@ -40,7 +41,7 @@ router.get(
         esRole("CLIENT_ROLE"),
         check('id', 'Invalid ID, try another').isMongoId(),
         check('id').custom(existeFacturaById)
-    ],pagarProductos
+    ], pagarProductos
 );
 
 router.get(
@@ -48,7 +49,21 @@ router.get(
     [
         validarJWT, 
         esRole("CLIENT_ROLE"),
-    ],facturasHistory
+    ], facturasHistory
+);
+
+router.put(
+    "/:id",
+    [
+        validarJWT,
+        esRole("ADMIN_ROLE"),
+        check('id', 'Invalid ID, try another').isMongoId(),
+        check('id').custom(existeFacturaById),
+        check('productName', 'The name of the product is required').not().isEmpty(),
+        check('productName').custom(esProductoValido),
+        check('howManyProducts', 'The quantity of products is required').not().isEmpty(),
+        validarCampos
+    ], facturaPut
 );
 
 export default router;

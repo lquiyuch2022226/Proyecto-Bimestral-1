@@ -1,10 +1,6 @@
 import mongoose from 'mongoose';
 
 const FacturaSchema = mongoose.Schema({
-    date:{
-        type: String,
-        default: "0/0/0"
-    },
     carritoWithProducts: [{
         product: {
             type: mongoose.Schema.Types.ObjectId,
