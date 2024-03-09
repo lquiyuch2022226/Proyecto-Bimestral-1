@@ -176,16 +176,20 @@ export const facturaPut = async (req, res) => {
         });
     }
 
-    const factura = await Factura.findByIdAndUpdate(id, {
-        $addToSet: {
-            carritoWithProducts: {
-                product: producto._id,
-                howManyProducts,
-                subtotal: producto.price * howManyProducts
-            }
-        }
-    }, { new: true }
-    );
+    const factura = await Factura.findById(id);
+
+    const productoExistente = factura.carritoWithProducts.findIndex(item => item.product.toString() === producto._id.toString());
+
+    if (productoExistente !== -1) {
+        factura.carritoWithProducts[productoExistente].howManyProducts = howManyProducts;
+        factura.carritoWithProducts[productoExistente].subtotal = producto.price * howManyProducts;
+    } else {
+        factura.carritoWithProducts.push({
+            product: producto._id,
+            howManyProducts,
+            subtotal: producto.price * howManyProducts
+        });
+    }
 
     await factura.save();
     

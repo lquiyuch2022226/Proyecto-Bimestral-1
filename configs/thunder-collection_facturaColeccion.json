@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "facturaColeccion",
-    "dateExported": "2024-03-09T03:48:09.397Z",
+    "dateExported": "2024-03-09T04:37:44.287Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -10,15 +10,15 @@
             "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
             "containerId": "",
             "name": "pagar Productos",
-            "url": "http://localhost:3000/ventasApi/v1/factura/65ebd18e0f2facee3fd28095",
+            "url": "http://localhost:3000/ventasApi/v1/factura/65ebe3cc88272ed49d4121cf",
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-03-08T12:17:08.333Z",
-            "modified": "2024-03-09T03:10:02.020Z",
+            "modified": "2024-03-09T04:22:12.961Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDE2ODBmMmZhY2VlM2ZkMjgwNzQiLCJpYXQiOjE3MDk5NTM3OTIsImV4cCI6MTcwOTk1NzM5Mn0.MCN_EWj9D6O298_MSAxQSmG5wP_WNBr2Jg7r0L5uJnc"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZTJhOTg4MjcyZWQ0OWQ0MTIxOWIiLCJpYXQiOjE3MDk5NTgwODAsImV4cCI6MTcwOTk2MTY4MH0.W1BKZzs8LcM0CQicp9YxEq4UcULAhhxTOyrnoksC96o"
                 }
             ],
             "params": [],
@@ -34,11 +34,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-08T14:47:44.964Z",
-            "modified": "2024-03-09T03:03:26.528Z",
+            "modified": "2024-03-09T04:22:46.737Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZDE2ODBmMmZhY2VlM2ZkMjgwNzQiLCJpYXQiOjE3MDk5NTMzOTYsImV4cCI6MTcwOTk1Njk5Nn0.XqXg0cuRKdDPcY8J1S3L9NFDH1IAwF5rUf1PR7l7p84"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZTJhOTg4MjcyZWQ0OWQ0MTIxOWIiLCJpYXQiOjE3MDk5NTgwODAsImV4cCI6MTcwOTk2MTY4MH0.W1BKZzs8LcM0CQicp9YxEq4UcULAhhxTOyrnoksC96o"
                 }
             ],
             "params": [],
@@ -50,21 +50,21 @@
             "colId": "2ec5d2bc-10bd-4724-b548-5625351d3708",
             "containerId": "",
             "name": "factura Put",
-            "url": "http://localhost:3000/ventasApi/v1/factura/65ebd18e0f2facee3fd28095",
+            "url": "http://localhost:3000/ventasApi/v1/factura/65ebe3cc88272ed49d4121cf",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-03-09T03:42:41.812Z",
-            "modified": "2024-03-09T03:47:06.021Z",
+            "modified": "2024-03-09T04:37:27.915Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViY2FiNzJiZTM5ZTQxM2RkMDJmYTYiLCJpYXQiOjE3MDk5NTU4MTUsImV4cCI6MTcwOTk1OTQxNX0.Medl8HlxXB4yWp6O93-U7apflq_Mgk7V4SjJentg31E"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZTI5ZDg4MjcyZWQ0OWQ0MTIxOTciLCJpYXQiOjE3MDk5NTgyMDAsImV4cCI6MTcwOTk2MTgwMH0.s_De4t2-R-9XZrbn-i9JIKgjI8ROQa7GEWgi85zuLVU"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"productName\": \"Sopa Laky\",\n  \"howManyProducts\": 2\n}",
+                "raw": "{\n  \"productName\": \"Sopa Laky\",\n  \"howManyProducts\": 1\n}",
                 "form": []
             },
             "tests": []
