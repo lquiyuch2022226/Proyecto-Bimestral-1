@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "carritoColeccion",
-    "dateExported": "2024-03-09T05:14:36.236Z",
+    "dateExported": "2024-03-09T05:28:12.900Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -102,6 +102,25 @@
                 {
                     "name": "x-token",
                     "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWNjMTA0MmQyNmMxZWE3NzllMjUiLCJpYXQiOjE3MDk5NjEwMzYsImV4cCI6MTcwOTk2NDYzNn0.2glfCGU1zy_wNya4cnyn_4T3P74k6MjiTgtblOs1SwM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aacea016-0afc-44a6-b4e7-5fa2d6058689",
+            "colId": "fae3494e-1ca5-4437-8c84-7df5b82dae39",
+            "containerId": "",
+            "name": "products GetByCategory",
+            "url": "http://localhost:3000/ventasApi/v1/product/getByCategory/Comida",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-09T05:23:17.622Z",
+            "modified": "2024-03-09T05:27:11.811Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWIxMmUxNGViMTdhMWZmNTg0YjIiLCJpYXQiOjE3MDk5NjE4NjEsImV4cCI6MTcwOTk2NTQ2MX0.7sHl8NDzmmtbK8Uus47cvhCPjNrxtqLbFTUazd9oc2c"
                 }
             ],
             "params": [],

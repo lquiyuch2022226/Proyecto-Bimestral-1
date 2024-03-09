@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { check } from 'express-validator';
 import { validarCampos } from '../middlewares/validar-campos.js';
 import { validarJWT } from '../middlewares/validar-jwt.js';
-import { existeProducto, asignarCategoria, stockPositivo, pricePositivo, esProductoValido} from '../helpers/db-validators.js';
+import { existeProducto, asignarCategoria, stockPositivo, pricePositivo, esProductoValido, existeCategoriaByName} from '../helpers/db-validators.js';
 import { esRole } from '../middlewares/validar-roles.js';
 
 import {
@@ -13,7 +13,8 @@ import {
     productGetByName,
     productsInventory,
     productsOutOfStock,
-    productsMostSelled
+    productsMostSelled,
+    productsGetByCategory
 } from '../product/product.controller.js'
 
 const router = Router();
@@ -97,6 +98,16 @@ router.get(
         esRole("ADMIN_ROLE", "CLIENT_ROLE"),
     ],
     productsMostSelled
+);
+
+router.get(
+    "/getByCategory/:nameCategory",
+    [
+        validarJWT,
+        esRole("ADMIN_ROLE", "CLIENT_ROLE"),
+        check('nameCategory').custom(existeCategoriaByName),
+    ],
+    productsGetByCategory
 );
 
 export default router;

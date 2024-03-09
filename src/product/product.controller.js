@@ -159,3 +159,29 @@ export const productsMostSelled = async (req, res) => {
         products
     });
 };
+
+export const productsGetByCategory = async (req, res) => {
+    const { nameCategory } = req.params;
+
+    const categoryFound = await Category.findOne({ nameCategory: nameCategory });
+
+    const { limite, desde } = req.query;
+    const query = { estado: true, category: categoryFound._id };
+
+    const [total, products] = await Promise.all([
+        Product.countDocuments(query),
+        Product.find(query)
+            .populate({
+                path: 'category',
+                select: 'nameCategory description -_id'
+            })
+            .select('-estado')
+            .skip(Number(desde))
+            .limit(Number(limite))
+    ]);
+
+    res.status(200).json({
+        total,
+        products
+    });
+}
